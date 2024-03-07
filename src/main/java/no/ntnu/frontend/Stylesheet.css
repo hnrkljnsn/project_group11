@@ -1,0 +1,23 @@
+.topNavMenu {
+    background-color: #1C99AB ;
+    overflow: hidden;
+}
+
+.topNavMenu a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+.topNavMenu a:hover {
+    background-color: #23ADC1;
+    color: white;
+}
+
+.topNavMenu a.active {
+    background-color: #157887;
+    color: white;
+}
