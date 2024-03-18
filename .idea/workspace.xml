@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Created the necessary files to start coding frontende + separate directories for backend and frontend">
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/frontend/about.html" afterDir="false" />
+    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Finally able to make the project into a spring project. Will use the web resource spring initializer next time...">
+      <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/PageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/frontend/Stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/frontend/Stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/frontend/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/frontend/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/frontend/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/frontend/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,17 +21,25 @@
       <list>
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="frontend" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2b7xwBLd2bcBMMzGRF3CziS7wTu" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -38,10 +47,15 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "backend",
     "last_opened_file_path": "/Users/henrikloejensen/Documents/project_group11",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -56,8 +70,29 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/src/main/java/no/ntnu/frontend" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="project_group11" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="no.ntnu.Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="no.ntnu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Application" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -77,7 +112,14 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1709799101541</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="Finally able to make the project into a spring project. Will use the web resource spring initializer next time...">
+      <option name="closed" value="true" />
+      <created>1710771243348</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1710771243348</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -88,7 +130,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/backend" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -96,6 +150,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created the necessary files to start coding frontende + separate directories for backend and frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created the necessary files to start coding frontende + separate directories for backend and frontend" />
+    <MESSAGE value="Finally able to make the project into a spring project. Will use the web resource spring initializer next time..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finally able to make the project into a spring project. Will use the web resource spring initializer next time..." />
   </component>
 </project>
