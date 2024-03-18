@@ -10,46 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap');
-
-        /* Use the Inter font family for body and all text elements */
-        body,
-        h1,
-        h2,
-        h3,
-        p {
-            font-family: 'Inter', sans-serif;
-        }
-
-        /* Custom font weights for headings and paragraph text */
-        h1,
-        h2,
-        h3 {
-            font-weight: 500;
-            /* Inter medium italic */
-            font-style: italic;
-        }
-
-        p {
-            font-weight: 300;
-            /* Inter light */
-        }
-
-        /* Background colors for header, footer, and containers */
-        nav,
-        footer {
-            background-color: #4AA8C6;
-            color: #FFFFFF;
-        }
-
-        .container {
-            background-color: #FFFFFF;
-            color: #000000;
-        }
-
-        /* Ensure full viewport height sections */
-        .full-height {
-            min-height: 100vh;
-        }
     </style>
 </head>
 
@@ -92,19 +52,61 @@
                 <div class="bg-white p-8 shadow-lg rounded-lg">
                     <form action="#" method="POST">
                         <div class="grid grid-cols-1 gap-6">
-                            <div class="col-span-1 sm:col-span-1">
-                                <label for="from" class="block text-sm font-medium text-gray-700">From</label>
-                                <input type="text" name="from" id="from"
-                                    class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                            <div class="flex justify-between space-x-4">
+                                <div class="flex flex-col">
+                                    <label for="trip-type" class="block text-sm font-medium text-gray-700">One-Way/Round
+                                        Trip</label>
+                                    <select id="trip-type" name="trip-type"
+                                        class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                                        <option>Round Trip</option>
+                                        <option>One Way</option>
+                                    </select>
+                                </div>
+
+                                <div class="flex flex-col">
+                                    <label for="passenger" class="block text-sm font-medium text-gray-700">Adult</label>
+                                    <select id="passenger" name="passenger"
+                                        class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                                        <option>1 Adult</option>
+                                        <option>2 Adults</option>
+                                        <option>3 Adults</option>
+                                    </select>
+                                </div>
+
+                                <div class="flex flex-col">
+                                    <label for="departure-date"
+                                        class="block text-sm font-medium text-gray-700">Departure Time</label>
+                                    <input type="date" id="departure-date" name="departure-date"
+                                        class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                                </div>
+
+                                <div class="flex flex-col">
+                                    <label for="return-date" class="block text-sm font-medium text-gray-700">Return
+                                        Time</label>
+                                    <input type="date" id="return-date" name="return-date"
+                                        class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                                </div>
                             </div>
-                            <div class="col-span-1 sm:col-span-1">
-                                <label for="to" class="block text-sm font-medium text-gray-700">To</label>
-                                <input type="text" name="to" id="to"
-                                    class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+
+                            <div class="flex justify-between space-x-4">
+                                <div class="flex-grow">
+                                    <label for="from" class="block text-sm font-medium text-gray-700">From</label>
+                                    <input type="text" name="from" id="from" placeholder="FRA"
+                                        class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                </div>
+
+                                <div class="mx-4 flex items-center justify-center text-3xl text-gray-400">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </div>
+
+                                <div class="flex-grow">
+                                    <label for="to" class="block text-sm font-medium text-gray-700">To</label>
+                                    <input type="text" name="to" id="to" placeholder="TIL"
+                                        class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                </div>
                             </div>
-                            <!-- Additional fields like Datepickers, Number of Passengers, etc. -->
-                            <!-- Submit Button -->
-                            <div class="col-span-1 sm:col-span-1">
+
+                            <div class="mt-4">
                                 <button type="submit"
                                     class="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                                     Find Flights

@@ -1,23 +1,39 @@
-.topNavMenu {
-    background-color: #1C99AB ;
-    overflow: hidden;
-}
+ /* Use the Inter font family for body and all text elements */
+ body,
+ h1,
+ h2,
+ h3,
+ p {
+     font-family: 'Inter', sans-serif;
+ }
 
-.topNavMenu a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 19px;
-}
+ /* Custom font weights for headings and paragraph text */
+ h1,
+ h2,
+ h3 {
+     font-weight: 500;
+     /* Inter medium italic */
+     font-style: italic;
+ }
 
-.topNavMenu a:hover {
-    background-color: #23ADC1;
-    color: white;
-}
+ p {
+     font-weight: 300;
+     /* Inter light */
+ }
 
-.topNavMenu a.active {
-    background-color: #157887;
-    color: white;
-}
+ /* Background colors for header, footer, and containers */
+ nav,
+ footer {
+     background-color: #4AA8C6, ;
+     color: #FFFFFF;
+ }
+
+ .container {
+     background-color: #FFFFFF;
+     color: #000000;
+ }
+
+ /* Ensure full viewport height sections */
+ .full-height {
+     min-height: 100vh;
+ }
