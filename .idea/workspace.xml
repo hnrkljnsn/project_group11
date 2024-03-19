@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Finally able to make the project into a spring project. Will use the web resource spring initializer next time...">
+    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Got a springboot warning when navigating the menu of the website. Turns out the &lt;nav th:insert needs to be wrapped as such:  &quot;~{...}&quot;">
+      <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/Flight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -116,7 +117,14 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1710771243348</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="Got a springboot warning when navigating the menu of the website. Turns out the &lt;nav th:insert needs to be wrapped as such:  &quot;~{...}&quot;">
+      <option name="closed" value="true" />
+      <created>1710839768576</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1710839768576</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +156,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created the necessary files to start coding frontende + separate directories for backend and frontend" />
     <MESSAGE value="Finally able to make the project into a spring project. Will use the web resource spring initializer next time..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finally able to make the project into a spring project. Will use the web resource spring initializer next time..." />
+    <MESSAGE value="Got a springboot warning when navigating the menu of the website. Turns out the &lt;nav th:insert needs to be wrapped as such:  &quot;~{...}&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Got a springboot warning when navigating the menu of the website. Turns out the &lt;nav th:insert needs to be wrapped as such:  &quot;~{...}&quot;" />
   </component>
 </project>
