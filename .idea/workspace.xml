@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Got a springboot warning when navigating the menu of the website. Turns out the &lt;nav th:insert needs to be wrapped as such:  &quot;~{...}&quot;">
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/Flight.java" afterDir="false" />
+    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Started creating a simple entity class for flights. Should generate ID for flights. Used the generate function in intellij to create getter and setter methods.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/DummyDataInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/FlightRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -19,6 +21,7 @@
       <list>
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -26,10 +29,13 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="frontend" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -63,6 +69,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "spring.configuration.checksum": "934567fe23c9b9d09b9a2b9a5fb0abd7",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -102,6 +109,7 @@
       <updated>1705580155022</updated>
       <workItem from="1705580156045" duration="220000" />
       <workItem from="1709798748706" duration="3632000" />
+      <workItem from="1712822037505" duration="5956000" />
     </task>
     <task id="LOCAL−00001" summary="Created the necessary files to start coding frontende + separate directories for backend and frontend">
       <option name="closed" value="true" />
@@ -158,5 +166,15 @@
     <MESSAGE value="Finally able to make the project into a spring project. Will use the web resource spring initializer next time..." />
     <MESSAGE value="Got a springboot warning when navigating the menu of the website. Turns out the &lt;nav th:insert needs to be wrapped as such:  &quot;~{...}&quot;" />
     <option name="LAST_COMMIT_MESSAGE" value="Got a springboot warning when navigating the menu of the website. Turns out the &lt;nav th:insert needs to be wrapped as such:  &quot;~{...}&quot;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ClassNotFoundException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
