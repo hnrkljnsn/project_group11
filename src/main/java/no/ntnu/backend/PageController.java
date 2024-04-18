@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class PageController {
 
-    @GetMapping("/home1.html")
+    @GetMapping("/home.html")
     public String getHome() {
-        return "home1";
+        return "home";
     }
 
     @GetMapping("/about.html")

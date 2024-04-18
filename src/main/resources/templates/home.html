@@ -1,156 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+<head style="background-color: #4AA8C6">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flight Finder</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap');
-    </style>
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/ProjectStylesheet.css">
+
 </head>
+<body>
+<div class ="navigationBar">
 
-<body class="bg-blue-50">
+    <div class ="left-items">
+        <a href="#home">FlightFinder</a>
+    </div>
 
-    <!-- Navigation -->
-    <nav th:insert="~{components/navigationBar}"></nav>
+    <div class="middle-items">
+        <a class ="active" href='#home'>Home</a>
+        <a href="#about">About</a>
+        <a href="#search">Search</a>
+    </div>
 
-    <!-- Search Section -->
-    <section class="full-height bg-cover bg-center"
-        style="background-image: url(https://github.com/hnrkljnsn/project_group11/blob/main/img/pixlr-image-generator-f376714d-9e3b-465d-be85-f3177abebe3c%201.png?raw=true);">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
-            <div class="max-w-3xl mx-auto text-center">
-                <div class="bg-white p-8 shadow-lg rounded-lg">
-                    <form action="#" method="POST">
-                        <div class="grid grid-cols-1 gap-6">
-                            <div class="flex justify-between space-x-4">
-                                <div class="flex flex-col">
-                                    <label for="trip-type" class="block text-sm font-medium text-gray-700">One-Way/Round
-                                        Trip</label>
-                                    <select id="trip-type" name="trip-type"
-                                        class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                                        <option>Round Trip</option>
-                                        <option>One Way</option>
-                                    </select>
-                                </div>
+    <div class ="right-items">
+        <a href="#user">User</a>
+    </div>
 
-                                <div class="flex flex-col">
-                                    <label for="passenger" class="block text-sm font-medium text-gray-700">Adult</label>
-                                    <select id="passenger" name="passenger"
-                                        class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                                        <option>1 Adult</option>
-                                        <option>2 Adults</option>
-                                        <option>3 Adults</option>
-                                    </select>
-                                </div>
+</div>
 
-                                <div class="flex flex-col">
-                                    <label for="departure-date"
-                                        class="block text-sm font-medium text-gray-700">Departure Time</label>
-                                    <input type="date" id="departure-date" name="departure-date"
-                                        class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                                </div>
-
-                                <div class="flex flex-col">
-                                    <label for="return-date" class="block text-sm font-medium text-gray-700">Return
-                                        Time</label>
-                                    <input type="date" id="return-date" name="return-date"
-                                        class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                                </div>
-                            </div>
-
-                            <div class="flex justify-between space-x-4">
-                                <div class="flex-grow">
-                                    <label for="from" class="block text-sm font-medium text-gray-700">From</label>
-                                    <input type="text" name="from" id="from" placeholder="FRA"
-                                        class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                                </div>
-
-                                <div class="mx-4 flex items-center justify-center text-3xl text-gray-400">
-                                    <i class="fas fa-exchange-alt"></i>
-                                </div>
-
-                                <div class="flex-grow">
-                                    <label for="to" class="block text-sm font-medium text-gray-700">To</label>
-                                    <input type="text" name="to" id="to" placeholder="TIL"
-                                        class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                                </div>
-                            </div>
-
-                            <div class="mt-4">
-                                <button type="submit"
-                                    class="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                                    Find Flights
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Destination Sections -->
-    <section class="py-12 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-semibold text-gray-900">Popular Destinations</h2>
-            <div class="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
-                <!-- Repeat for each destination -->
-                <!-- Placeholder images with descriptions -->
-                <!-- Make sure to replace with actual images and adjust the alt text -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Customer Review Section -->
-    <section class="bg-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gray-100 p-8 rounded-lg shadow-md">
-                <h2 class="text-lg font-semibold text-gray-900">Customer Reviews</h2>
-                <div class="mt-6">
-                    <div class="mb-4">
-                        <div class="flex items-center">
-                            <div class="text-3xl font-bold text-yellow-500">5.0</div>
-                            <div class="ml-4">
-                                <i class="fas fa-star text-yellow-500"></i>
-                                <i class="fas fa-star text-yellow-500"></i>
-                                <i class="fas fa-star text-yellow-500"></i>
-                                <i class="fas fa-star text-yellow-500"></i>
-                                <i class="fas fa-star text-yellow-500"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600">All Reviews (1)</p>
-                    <div class="mt-4 border-t border-b py-4">
-                        <!-- Single review -->
-                        <div class="flex justify-between">
-                            <div class="text-sm text-gray-600">Anonymous User</div>
-                            <div class="text-sm text-gray-500">2024-03-17</div>
-                        </div>
-                        <p class="mt-2 text-gray-600">Best site</p>
-                    </div>
-                    <div class="mt-4 flex justify-end">
-                        <button class="text-blue-600 text-sm hover:underline">+ Add Review</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<h2>hei</h2>
+<p>Testing</p>
 
 
-    <!-- Similar sections for Trending and Browse destinations -->
+<div class="search-wrapper">
+    <label for="searchQuery">Search flights</label>
+    <form id="searchForm">
+        <input type="search" id="searchQuery" placeholder="Search for flights...">
+        <button type="submit">Search</button>
+    </form>
+</div>
 
-    <footer class="bg-white">
-        <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
-            <p class="text-center text-base text-gray-400">
-                &copy; 2024 FlightFinder. All rights reserved.
-            </p>
-        </div>
-    </footer>
+<div class="flight-result-list">
+    <div class="result-list">
 
+    </div>
+</div>
+
+
+<script src="/js/searchScript.js"></script>
 </body>
 
+<footer style="background-color: #4AA8C6">
+
+</footer>
 </html>
