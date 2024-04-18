@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Made the project Java 17 again.">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/searchScript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/home2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/PageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/searchScript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/stylesheets/ProjectStylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/stylesheets/ProjectStylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/searchScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/searchScript.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
