@@ -8,10 +8,12 @@ document.getElementById('searchForm').addEventListener('submit', function (event
     fetch('/api/search?query=' + encodeURIComponent(query))
         .then(response => response.json())
         .then(flights => {
-            const resultsContainer = document.querySelector('.result-list');
+            const resultsContainer = document.querySelector('.flight-result-list ul');
             resultsContainer.innerHTML = ""; // Clear previous results
             flights.forEach(flight => {
-                resultsContainer.innerHTML += '<div>' + createFlightInfoString(flight) + '</div>';
+                const newListItem = document.createElement('li');
+                newListItem.innerHTML = createFlightInfoString(flight);
+                resultsContainer.appendChild(newListItem);
             });
         })
         .catch(error => console.error('Error', error));

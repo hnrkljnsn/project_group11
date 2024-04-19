@@ -71,3 +71,14 @@
  .full-height {
      min-height: 100vh;
  }
+.flight-result-list {
+    gap: .25rem;
+    margin-top: 1rem;
+}
+.result-list li {
+    border: 1px solid black;
+    background-color: white;
+    padding: .5rem;
+    list-style: none;
+    width: auto;
+}
