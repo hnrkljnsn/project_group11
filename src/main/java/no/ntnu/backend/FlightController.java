@@ -18,6 +18,10 @@ public class FlightController {
 
     @GetMapping("/search")
     public ResponseEntity<List<Flight>> searchFlights(@RequestParam String query) {
+        // If query is empty, return all flights
+        if (query == null || query.trim().isEmpty()) {
+            return ResponseEntity.ok((List<Flight>) flightRepository.findAll());
+        }
         List<Flight> flights = flightRepository.findByFlightNameContaining(query);
         return ResponseEntity.ok(flights);
     }
