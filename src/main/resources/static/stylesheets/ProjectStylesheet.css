@@ -71,19 +71,44 @@
  .full-height {
      min-height: 100vh;
  }
-.flight-result-list {
-    gap: .25rem;
-    margin-top: 1rem;
 
-}
-.result-list li {
-    border: 1px solid black;
-    background-color: white;
-    padding: .5rem;
-    list-style: none;
-    text-align: center;
-}
+
+ /* Styling for the flight results */
+
+ .result-list {
+     list-style-type: none;
+     padding: 0;
+     margin: 0;
+ }
+ .flight-card {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-top: 10px;
+     border: 1px solid #ccc;
+     padding: 10px;
+     background-color: #fff;
+ }
+
+ .flight-image img {
+     width: 200px;
+     height: auto;
+     margin-right: 20px;
+ }
+
  .flight-info {
-     margin-right: 5rem; /* Adjust the spacing to your liking */
-     display: inline-block; /* This makes sure margin is applied properly */
+     display: inline-flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     margin-right: 20px;
+     min-width: 100px;
+     white-space: nowrap;
+ }
+
+ .flight-info:before {
+     content: attr(data-header);
+     font-weight: bold;
+     white-space: nowrap;
+     margin-bottom: 4px;
  }

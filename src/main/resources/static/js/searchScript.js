@@ -29,7 +29,18 @@ function handleError(error) {
 }
 
 function createFlightInfoString(flight) {
-    return Object.keys(flight)
-        .map(key => `<span class="flight-info">${flight[key]}</span>`)
-        .join('');
+    let imageSrc = 'https://t4.ftcdn.net/jpg/04/38/64/95/360_F_438649569_DsSHTkasH6GqqQXwu7FbRG0OMHstAc2D.jpg';
+
+    return `
+      <li class="flight-card">
+        <div class="flight-image">
+          <img src="${imageSrc}" alt="Flight Image" />
+        </div>
+        <div class="flight-info" data-header="Id">${flight.flightId}</div>
+        <div class="flight-info" data-header="Name">${flight.flightName}</div>
+        <div class="flight-info" data-header="Round-trip">${flight.roundTrip}</div>
+        <div class="flight-info" data-header="Departure">${flight.departureDate}</div>
+        <div class="flight-info" data-header="Return">${flight.returnDate}</div>
+      </li>
+    `;
 }
