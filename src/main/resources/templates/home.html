@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/ProjectStylesheet.css">
 
 </head>
+
 <body>
-<div class ="navigationBar">
+    <div class="navigationBar">
 
-    <div class ="left-items">
-        <a href="home.html">FlightFinder</a>
+        <div class="left-items">
+            <a href="home.html">FlightFinder</a>
+        </div>
+
+        <div class="middle-items">
+            <a class="active" href='home.html'>Home</a>
+            <a href="about.html">About</a>
+            <a href="search.html">Search</a>
+        </div>
+
+        <div class="right-items">
+            <a href="#user">User</a>
+        </div>
+
     </div>
 
-    <div class="middle-items">
-        <a class ="active" href='home.html'>Home</a>
-        <a href="about.html">About</a>
-        <a href="search.html">Search</a>
+    <h2>hei</h2>
+    <p>Testing</p>
+
+
+    <div class="search-wrapper">
+        <label for="searchQuery">Search flights</label>
+        <form id="searchForm">
+            <input type="search" id="searchQuery" placeholder="Search for flights...">
+            <button type="submit">Search</button>
+        </form>
     </div>
 
-    <div class ="right-items">
-        <a href="#user">User</a>
-    </div>
-
-</div>
-
-<h2>hei</h2>
-<p>Testing</p>
-
-
-<div class="search-wrapper">
-    <label for="searchQuery">Search flights</label>
-    <form id="searchForm">
-        <input type="search" id="searchQuery" placeholder="Search for flights...">
-        <button type="submit">Search</button>
-    </form>
-</div>
-
-<script src="/js/homeSearchScript.js"></script>
+    <script src="/js/homeSearchScript.js"></script>
 </body>
 
 <footer>
 
 </footer>
+
 </html>

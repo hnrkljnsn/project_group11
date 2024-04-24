@@ -1,0 +1,118 @@
+ /* Use the Inter font family for body and all text elements */
+
+ body,
+ h1,
+ h2,
+ h3,
+ p {
+   font-family: 'Inter', sans-serif;
+ }
+
+ /* Custom font weights for headings and paragraph text */
+ h1,
+ h2,
+ h3 {
+   font-weight: 500;
+   /* Inter medium italic */
+   font-style: italic;
+ }
+
+ p {
+   font-weight: 300;
+   /* Inter light */
+ }
+
+ /* Background colors for header, footer, and containers */
+ nav,
+ footer {
+   background-color: #4AA8C6;
+   color: #FFFFFF;
+ }
+
+ .navigationBar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 60px;
+   background-color: #4AA8C6;
+   padding: 0 20px;
+ }
+
+ .navigationBar.active {
+   font-weight: bold;
+   color: red;
+ }
+
+ .navigationBar a {
+   color: #FFFFFF;
+   text-decoration: none;
+   margin-right: 20px;
+ }
+
+ .middle-items {
+   flex-grow: 1;
+   justify-content: center;
+ }
+
+ .left-items,
+ .right-items,
+ .middle-items {
+   display: flex;
+   align-items: center;
+ }
+
+ .left-items {
+   margin-right: auto;
+ }
+
+ .container {
+   background-color: #FFFFFF;
+   color: #000000;
+ }
+
+ /* Ensure full viewport height sections */
+ .full-height {
+   min-height: 100vh;
+ }
+
+
+ /* Styling for the flight results */
+
+ .result-list {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+ }
+
+ .flight-card {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 10px;
+   border: 1px solid #ccc;
+   padding: 10px;
+   background-color: #fff;
+ }
+
+ .flight-image img {
+   width: 200px;
+   height: auto;
+   margin-right: 20px;
+ }
+
+ .flight-info {
+   display: inline-flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-right: 20px;
+   min-width: 100px;
+   white-space: nowrap;
+ }
+
+ .flight-info:before {
+   content: attr(data-header);
+   font-weight: bold;
+   white-space: nowrap;
+   margin-bottom: 4px;
+ }
