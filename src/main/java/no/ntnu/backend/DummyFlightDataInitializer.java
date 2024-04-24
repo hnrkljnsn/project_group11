@@ -6,15 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
-import no.ntnu.backend.Flight;
 
 import java.time.LocalDate;
 
 @Component
-public class DummyDataInitializer implements ApplicationListener<ApplicationReadyEvent>{
+public class DummyFlightDataInitializer implements ApplicationListener<ApplicationReadyEvent>{
     @Autowired
     private FlightRepository flightRepository;
-    private final Logger logger = LoggerFactory.getLogger("DummyInitializer");
+    private final Logger logger = LoggerFactory.getLogger("DummyFlightInitializer");
 
     /**
      * This method is called when the application is ready (loaded).
@@ -23,7 +22,7 @@ public class DummyDataInitializer implements ApplicationListener<ApplicationRead
      */
     @Override
     public void onApplicationEvent(ApplicationReadyEvent event) {
-        logger.info("Importing test data...");
+        logger.info("Importing flight test data...");
         if(flightRepository.count()==0) {
             Flight flight1 = new Flight();
             flight1.flightId=1;
@@ -50,11 +49,11 @@ public class DummyDataInitializer implements ApplicationListener<ApplicationRead
             flightRepository.save(flight2);
             flightRepository.save(flight3);
 
-            logger.info("DONE importing test data");
+            logger.info("DONE importing flight test data");
         }
         else
         {
-            logger.info("All test data already imported...");
+            logger.info("All flight test data already imported...");
         }
     }
 }
