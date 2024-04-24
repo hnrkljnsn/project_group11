@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+</html>
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>FlightFinder</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/ProjectStylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 </head>
+
 
 <body>
     <div class="navigationBar">
@@ -16,20 +20,43 @@
         </div>
 
         <div class="middle-items">
-            <a class="active" href='home.html'>Home</a>
+            <a class="active" href="home.html">Home</a>
             <a href="about.html">About</a>
             <a href="search.html">Search</a>
         </div>
 
         <div class="right-items">
-            <a href="#user">User</a>
+            <a href="#user"><i class="fas fa-user"></i></a>
         </div>
 
     </div>
 
+    <div class="booking-section">
+
+        <form class="booking-form" action="#" th:action="@{/bookFlight}" method="post">
+            <div class="input-group">
+                <label for="from">From:</label>
+                <input type="text" id="from" name="from" th:value="${from}" required />
+            </div>
+            <div class="input-group">
+                <label for="to">To:</label>
+                <input type="text" id="to" name="to" th:value="${to}" required />
+            </div>
+            <div class="input-group">
+                <label for="departure">Departure Date:</label>
+                <input type="date" id="departure" name="departure" th:value="${departureDate}" required />
+            </div>
+            <div class="input-group">
+                <label for="return">Return Date:</label>
+                <input type="date" id="return" name="return" th:value="${returnDate}" required />
+            </div>
+            <!-- Add more input fields as needed -->
+            <button type="submit">Book Flight</button>
+        </form>
+    </div>
+
     <h2>hei</h2>
     <p>Testing</p>
-
 
     <div class="search-wrapper">
         <label for="searchQuery">Search flights</label>
@@ -40,10 +67,9 @@
     </div>
 
     <script src="/js/homeSearchScript.js"></script>
+
 </body>
 
 <footer>
 
 </footer>
-
-</html>
