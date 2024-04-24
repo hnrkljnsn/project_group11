@@ -4,6 +4,7 @@
 </html>
 
 <head>
+    <script src="../static/js/accountCreation.js"></script>
     <meta charset="UTF-8">
     <title>FlightFinder</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/ProjectStylesheet.css">
@@ -25,12 +26,37 @@
             <a href="search.html">Search</a>
         </div>
 
-        <div class="right-items">
-            <a href="#user"><i class="fas fa-user"></i></a>
-        </div>
+        <!-- User Icon -->
+        <a href="#user" id="userIcon"><i class="fas fa-user"></i></a>
+
+
 
     </div>
 
+    <!-- User Popup -->
+    <div id="loginPopup" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-btn" id="closePopup">&times;</span>
+            <h2>Log in or create an account</h2>
+            <form th:action="@{/login}" method="post">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-action">
+                    <a href="#" th:href="@{/create-account}">Create Account</a>
+                    <a href="#" th:href="@{/forgot-password}">Forgot password</a>
+                </div>
+                <button type="submit" class="btn btn-primary">LOG IN</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Booking Section -->
     <div class="booking-section">
 
         <form class="booking-form" action="#" th:action="@{/bookFlight}" method="post">
@@ -66,7 +92,8 @@
         </form>
     </div>
 
-    <script src="/js/homeSearchScript.js"></script>
+    <script src="../static/js/accountCreation.js"></script>
+    <script src="../static/js/homeSearchScript.js"></script>
 
     <footer class="footer">
         <div class="footer-column">
