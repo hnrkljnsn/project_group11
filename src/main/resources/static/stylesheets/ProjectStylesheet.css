@@ -1,114 +1,299 @@
- /* Use the Inter font family for body and all text elements */
+/* Use the Inter font family for body and all text elements */
+body,
+h1,
+h2,
+h3,
+p {
+    font-family: 'Inter', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
 
- body,
- h1,
- h2,
- h3,
- p {
-     font-family: 'Inter', sans-serif;
- }
+/* Custom font weights for headings and paragraph text */
+h1,
+h2,
+h3 {
+    font-weight: 500;
+    /* Inter medium italic */
+    font-style: italic;
+}
 
- /* Custom font weights for headings and paragraph text */
- h1,
- h2,
- h3 {
-     font-weight: 500;
-     /* Inter medium italic */
-     font-style: italic;
- }
+p {
+    font-weight: 300;
+    /* Inter light */
+}
 
- p {
-     font-weight: 300;
-     /* Inter light */
- }
-
- /* Background colors for header, footer, and containers */
- nav,
- footer {
-     background-color: #4AA8C6 ;
-     color: #FFFFFF;
- }
-
- .navigationBar{
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     height: 60px;
-     background-color: #4AA8C6;
-     padding: 0 20px;
- }
-
- .navigationBar.active{
-     font-weight: bold;
-     color: red;
- }
-
- .navigationBar a{
-     color: #FFFFFF;
-     text-decoration: none;
-     margin-right: 20px;
- }
-
- .middle-items{
-     flex-grow: 1;
-     justify-content: center;
- }
- .left-items,.right-items,.middle-items{
+.page-container {
     display: flex;
-     align-items: center;
- }
+    flex-direction: column;
+    min-height: 100vh;
+}
 
- .left-items{
-     margin-right: auto;
- }
+.content-wrap {
+    flex: 1;
+}
 
- .container {
-     background-color: #FFFFFF;
-     color: #000000;
- }
+.navigationBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: #4AA8C6;
+    padding: 0 20px;
+}
 
- /* Ensure full viewport height sections */
- .full-height {
-     min-height: 100vh;
- }
+.navigationBar.active{
+    font-weight: bold;
+    color: red;
+}
+
+.navigationBar a{
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-right: 50px;
+}
+
+.middle-items{
+    flex-grow: 1;
+    justify-content: center;
+}
+.right-items,.middle-items{
+    display: flex;
+    align-items: center;
+}
+
+.left-items{
+    margin-right: auto;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: oblique;
+}
+
+.container {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+/* Ensure full viewport height sections */
+.full-height {
+    min-height: 100vh;
+}
 
 
- /* Styling for the flight results */
+/* Styling for the flight results */
 
- .result-list {
-     list-style-type: none;
-     padding: 0;
-     margin: 0;
- }
- .flight-card {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     margin-top: 10px;
-     border: 1px solid #ccc;
-     padding: 10px;
-     background-color: #fff;
- }
+.result-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.flight-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fff;
+}
 
- .flight-image img {
-     width: 200px;
-     height: auto;
-     margin-right: 20px;
- }
+.flight-image img {
+    width: 100px;
+    height: 60px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
 
- .flight-info {
-     display: inline-flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     margin-right: 20px;
-     min-width: 100px;
-     white-space: nowrap;
- }
+.flight-info {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+    min-width: 100px;
+    white-space: nowrap;
+}
 
- .flight-info:before {
-     content: attr(data-header);
-     font-weight: bold;
-     white-space: nowrap;
-     margin-bottom: 4px;
- }
+.flight-info:before {
+    content: attr(data-header);
+    font-weight: bold;
+    white-space: nowrap;
+    margin-bottom: 4px;
+}
+
+
+
+/*Styling for the home page image/search-form*/
+
+.image-container {
+    position: relative;
+    width: 100%; /* Full width */
+    height: 600px; /* Fixed height */
+    overflow: hidden; /* Hide anything that goes beyond the container's height */
+}
+
+.image-container:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes bottom space/whitespace */
+}
+.search-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 50%;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for input and button */
+#searchQuery, button {
+    height: 40px;
+    border: 1px solid #ccc;
+    margin: 0;
+}
+
+#searchQuery {
+    flex-grow: 1;
+    border-radius: 8px 0 0 8px;
+    padding: 0 10px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border-radius: 0 8px 8px 0;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+/* Hide visually but keep for screen readers */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+
+/* Footer styling */
+.footer {
+    background-color: #4AA8C6;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #ace;
+}
+
+.newsletter {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.newsletter button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.language-select {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.language-select img {
+    width: 24px;
+    height: auto;
+}
+
+.copyright {
+    font-size: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+
+    .newsletter button {
+        width: 100%;
+    }
+
+    .language-select {
+        justify-content: center;
+    }
+}
