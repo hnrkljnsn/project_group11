@@ -14,13 +14,17 @@
             </div>
 
                 <div class="image-container">
-                    <img src="https://raw.githubusercontent.com/hnrkljnsn/project_group11/main/img/pixlr-image-generator-f376714d-9e3b-465d-be85-f3177abebe3c%201.png" alt="Background image" />
-                    <div class="search-wrapper">
-                        <label for="searchQuery" class="visually-hidden">Search flights</label>
-                        <form id="searchForm">
-                            <input type="search" id="searchQuery" placeholder="Search for flights...">
-                            <button type="submit">Search</button>
-                        </form>
+                    <div class="booking-section">
+                        <img src="https://raw.githubusercontent.com/hnrkljnsn/project_group11/main/img/pixlr-image-generator-f376714d-9e3b-465d-be85-f3177abebe3c%201.png" alt="Background image" />
+                        <div class="search-wrapper">
+                            <label for="searchQuery" class="visually-hidden">Search flights</label>
+                            <form id="searchForm">
+                                <input type="search" id="searchQuery" placeholder="Search for flights...">
+                                <label for="departureDate"></label><input type="date" id="departureDate" name="departureDate" placeholder="Departure Date" required>
+                                <label for="returnDate"></label><input type="date" id="returnDate" name="returnDate" placeholder="Return Date">
+                                <button type="submit">Search</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
 
