@@ -4,26 +4,18 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/ProjectStylesheet.css">
-
 </head>
 <body>
-<div class ="navigationBar">
+    <div class="page-container">
+        <div class="content-wrap">
+            <div th:replace="fragments/topnav.html :: navbar">
+            </div>
+                <canvas id="myCanvas"></canvas>
+        </div>
 
-    <div class ="left-items">
-        <a href="home.html">Flight<br>Finder</a>
+        <div th:replace="fragments/footer.html :: footer">
+
+        </div>
     </div>
-
-    <div class="middle-items">
-        <a class ="active" href='home.html'>Home</a>
-        <a href="about.html">About</a>
-        <a href="search.html">Search</a>
-    </div>
-
-    <div class ="right-items">
-        <a href="#user">User</a>
-    </div>
-
-</div>
-
 </body>
 </html>

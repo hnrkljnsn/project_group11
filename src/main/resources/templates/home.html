@@ -6,79 +6,28 @@
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/ProjectStylesheet.css">
     <link rel="icon" type="image/x-icon" href="/img/paper-plane-icon-logo.png">
-
 </head>
 <body>
-<div class="page-container">
-    <div class="content-wrap">
-        <div class ="navigationBar">
-
-    <div class ="left-items">
-        <a href="home.html">Flight<br>Finder</a>
-    </div>
-
-    <div class="middle-items">
-        <a class ="active" href='home.html'>Home</a>
-        <a href="about.html">About</a>
-        <a href="search.html">Search</a>
-    </div>
-
-    <div class ="right-items">
-        <a href="#user">User</a>
-    </div>
-
-</div>
-
-
-
-<div class="image-container">
-    <img src="https://raw.githubusercontent.com/hnrkljnsn/project_group11/main/img/pixlr-image-generator-f376714d-9e3b-465d-be85-f3177abebe3c%201.png" alt="Background image" />
-    <div class="search-wrapper">
-        <label for="searchQuery" class="visually-hidden">Search flights</label>
-        <form id="searchForm">
-            <input type="search" id="searchQuery" placeholder="Search for flights...">
-            <button type="submit">Search</button>
-        </form>
-    </div>
-</div>
-
-        <canvas id="myCanvas"></canvas>
-    </div>
-
-
-    <footer class="footer">
-        <div class="footer-column">
-            <div class="logo">Flight Finder</div>
-            <div class="copyright">
-                <p>Copyright @ 2024</p>
+    <div class="page-container">
+        <div class="content-wrap">
+            <div th:replace="fragments/topnav.html :: navbar">
             </div>
-        </div>
 
-        <div class="footer-column newsletter">
-            <input type="text" placeholder="Subscribe to our newsletter">
-            <button>Subscribe</button>
-        </div>
+                <div class="image-container">
+                    <img src="https://raw.githubusercontent.com/hnrkljnsn/project_group11/main/img/pixlr-image-generator-f376714d-9e3b-465d-be85-f3177abebe3c%201.png" alt="Background image" />
+                    <div class="search-wrapper">
+                        <label for="searchQuery" class="visually-hidden">Search flights</label>
+                        <form id="searchForm">
+                            <input type="search" id="searchQuery" placeholder="Search for flights...">
+                            <button type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
 
-        <div class="footer-column">
-            <h3>About us</h3>
-            <ul>
-                <li><a href="#">Api copyright</a></li>
-            </ul>
+            <canvas id="myCanvas"></canvas>
         </div>
-
-        <div class="footer-column">
-            <h3>Overview</h3>
+        <div th:replace="fragments/footer.html :: footer">
         </div>
-
-        <div class="footer-column">
-            <h3>Content</h3>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="search.html">Search</a></li>
-            </ul>
-        </div>
-    </footer>
-</div>
+    </div>
 </body>
 </html>
