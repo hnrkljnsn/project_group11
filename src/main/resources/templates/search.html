@@ -9,7 +9,7 @@
 <body>
     <div class="page-container">
       <div class="content-wrap">
-        <div th:replace="fragments/topnav :: navbar">
+        <div th:replace="~{fragments/topnav.html :: navbar}">
         </div>
 
         <div class="flight-result-list">
@@ -19,7 +19,7 @@
 
         <canvas id="myCanvas"></canvas>
       </div>
-      <div th:replace="fragments/footer.html :: footer">
+      <div th:replace="~{fragments/footer.html :: footer}">
       </div>
     </div>
 </body>

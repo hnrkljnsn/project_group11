@@ -123,14 +123,13 @@ p {
 }
 
 
-
 /*Styling for the home page image/search-form*/
 
 .image-container {
     position: relative;
     width: 100%; /* Full width */
     height: 600px; /* Fixed height */
-    overflow: hidden; /* Hide anything that goes beyond the container's height */
+    overflow: hidden;
 }
 
 .image-container:after {
@@ -147,7 +146,7 @@ p {
 .image-container img {
     width: 100%;
     height: auto;
-    display: block; /* Removes bottom space/whitespace */
+    display: block;
 }
 .search-wrapper {
     position: absolute;
@@ -159,7 +158,7 @@ p {
     height: 200px;
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -195,6 +194,34 @@ button {
     border: 0;
 }
 
+
+
+/* Styling for the grid-section with destinations on homepage*/
+
+.destination-grid-container {
+    margin: 0 auto;
+}
+
+.destination-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.grid-item {
+    flex: 1 0 auto; /* Items will grow to fill the space, won't shrink smaller than their content */
+    min-width: 200px; /* Items will not shrink smaller than 250px */
+    max-width: 250px;
+    height: 200px; /* fixed height */
+    box-sizing: border-box; /* Include padding and borders in the width */
+}
+
+.grid-item img {
+    width: 100%; /* Make the image fill the entire width of the grid-item */
+    height: 100%; /* Optional: Set the height to fill the grid-item if aspect ratio is not a concern */
+    object-fit: cover; /* This will ensure the image covers the area without stretching */
+}
 
 
 /* Footer styling */
@@ -297,3 +324,5 @@ button {
         justify-content: center;
     }
 }
+
+

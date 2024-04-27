@@ -10,3 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const gridItems = document.querySelectorAll('.grid-item');
+
+    gridItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const flightId = this.getAttribute('data-flight-id');
+            window.location.href = `/search.html?query=${encodeURIComponent(flightId)}`;
+        });
+    });
+});
