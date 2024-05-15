@@ -33,41 +33,16 @@
     </div>
 
     <!-- Login Page -->
-    <section class="login-page-inner">
-      <div class="rectangle-parent">
-        <div class="frame-inner"></div>
-        <div class="log-in-or">Log in or create an account</div>
-        <div class="frame-container">
-          <div class="frame-parent">
-            <div class="frame-group">
-              <div class="username-wrapper">
-                <div class="username">Username</div>
-              </div>
-              <input type="text" class="rectangle-icon" />
-            </div>
-            <div class="frame-div">
-              <div class="password-wrapper">
-                <div class="password">Password</div>
-              </div>
-              <input type="text" class="rectangle-icon" />
-            </div>
-            <div class="frame-wrapper1">
-              <div class="create-account-parent">
-                <div class="create-account">Create Account</div>
-                <div class="forgot-password">Forgot password</div>
-              </div>
-            </div>
-            <div class="frame-wrapper2">
-              <button class="vector-parent">
-                <img class="frame-child2" alt="" src="./public/rectangle-9.svg" />
-
-                <i class="log-in">LOG IN</i>
-              </button>
-            </div>
-          </div>
-        </div>
+    <div class="login-container">
+      <div class="login-title">Login or Create Account</div>
+      <input type="text" class="login-input" placeholder="Username">
+      <input type="password" class="login-input" placeholder="Password">
+      <button class="login-button">Login</button>
+      <div class="login-links">
+        <a href="#" class="create-account">Create Account</a>
+        <a href="#" class="forgot-password">Forgot Password?</a>
       </div>
-    </section>
+    </div>
 
     <script src="../static/js/accountCreation.js"></script>
     <script src="../static/js/homeSearchScript.js"></script>
