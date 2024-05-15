@@ -66,8 +66,12 @@
  }
 
  .container {
-   background-color: #FFFFFF;
-   color: #000000;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: stretch;
+   width: 100%;
+   height: 100vh;
  }
 
  /* Ensure full viewport height sections */
@@ -127,7 +131,11 @@
  }
 
  .booking-section {
+
+   flex-grow: 1;
    max-width: 600px;
+   max-height: 450px;
+   width: 100%;
    margin: 50px auto;
    background: rgba(255, 255, 255, 0.9);
    padding: 20px;
@@ -194,7 +202,7 @@
    /* Your desired background color */
    color: white;
    display: flex;
-   justify-content: space-between;
+   justify-content: space-evenly;
    align-items: center;
    padding: 20px;
    font-family: Arial, sans-serif;
@@ -290,78 +298,41 @@
    }
  }
 
- /* Popup window style */
- .popup-overlay {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background-color: rgba(0, 0, 0, 0.5);
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   visibility: hidden;
-   opacity: 0;
-   transition: visibility 0s, opacity 0.5s;
+ body {
+   margin: 0;
+   line-height: normal;
  }
 
- .popup-overlay.active {
-   visibility: visible;
-   opacity: 1;
- }
+ :root {
+   /* fonts */
+   --font-inter: Inter;
+   --font-inria-sans: "Inria Sans";
 
- .popup-content {
-   background: #fff;
-   padding: 20px;
-   border-radius: 5px;
-   text-align: center;
-   position: relative;
- }
+   /* font sizes */
+   --font-size-5xl: 24px;
+   --font-size-lgi: 19px;
+   --font-size-xl: 20px;
+   --font-size-base: 16px;
+   --font-size-29xl: 48px;
 
- .popup-content h2 {
-   margin-bottom: 20px;
- }
+   /* Colors */
+   --color-white: #fff;
+   --color-skyblue: #4aa8c6;
+   --color-black: #000;
+   --color-limegreen-100: #80ed5a;
+   --color-limegreen-200: #4dba26;
 
- .form-group {
-   margin-bottom: 15px;
- }
+   /* Gaps */
+   --gap-xl: 20px;
 
- .form-group input {
-   padding: 10px;
-   width: 100%;
-   margin-top: 5px;
-   box-sizing: border-box;
-   border: 1px solid #ccc;
-   border-radius: 4px;
- }
+   /* Paddings */
+   --padding-5xl: 24px;
+   --padding-xl: 20px;
+   --padding-25xl: 44px;
+   --padding-7xl: 26px;
+   --padding-4xs: 9px;
+   --padding-4xl: 23px;
 
- .form-action {
-   margin-top: 20px;
-   display: flex;
-   justify-content: space-between;
-   font-size: 0.9em;
- }
-
- .btn {
-   padding: 10px 20px;
-   border: none;
-   border-radius: 4px;
-   color: white;
-   font-weight: bold;
-   cursor: pointer;
- }
-
- .btn-primary {
-   background-color: #4CAF50;
-   /* Green */
- }
-
- /* Close button */
- .close-btn {
-   position: absolute;
-   top: 10px;
-   right: 10px;
-   font-size: 1.2em;
-   cursor: pointer;
+   /* Border radiuses */
+   --br-3xs: 10px;
  }
