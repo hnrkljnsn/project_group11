@@ -34,14 +34,16 @@
 
     <!-- Login Page -->
     <div class="login-container">
-      <div class="login-title">Login or Create Account</div>
-      <input type="text" class="login-input" placeholder="Username">
-      <input type="password" class="login-input" placeholder="Password">
-      <button class="login-button">Login</button>
-      <div class="login-links">
-        <a href="#" class="create-account">Create Account</a>
-        <a href="#" class="forgot-password">Forgot Password?</a>
-      </div>
+      <form th:action="@{/login}" method="post">
+        <div class="login-title">Login or Create Account</div>
+        <input type="text" class="login-input" placeholder="Username" th:field="*{username}" required />
+        <input type="password" class="login-input" placeholder="Password" th:field="*{password}" required />
+        <button class="login-button" type="submit">Login</button>
+        <div class="login-links">
+          <a href="#" class="create-account" th:href="@{/register}">Create Account</a>
+          <a href="#" class="forgot-password" th:href="@{/forgotPassword}">Forgot Password?</a>
+        </div>
+      </form>
     </div>
 
     <script src="../static/js/accountCreation.js"></script>

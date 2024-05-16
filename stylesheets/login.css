@@ -2,7 +2,7 @@
 .login-container {
   flex-grow: 1;
   max-width: 400px;
-  max-height: 230px;
+  max-height: 240px;
   width: 100%;
   margin: 50px auto;
   background: rgba(255, 255, 255, 0.9);

@@ -36,24 +36,26 @@
             <form class="booking-form" action="#" th:action="@{/bookFlight}" method="post">
                 <div class="input-group">
                     <label for="from">From:</label>
-                    <input type="text" id="from" name="from" th:value="${from}" required />
+                    <input type="text" id="from" name="from" th:field="*{from}" required />
                 </div>
                 <div class="input-group">
                     <label for="to">To:</label>
-                    <input type="text" id="to" name="to" th:value="${to}" required />
+                    <input type="text" id="to" name="to" th:field="*{to}" required />
                 </div>
                 <div class="input-group">
                     <label for="departure">Departure Date:</label>
-                    <input type="date" id="departure" name="departure" th:value="${departureDate}" required />
+                    <input type="date" id="departure" name="departure" th:field="*{departureDate}" required />
                 </div>
                 <div class="input-group">
                     <label for="return">Return Date:</label>
-                    <input type="date" id="return" name="return" th:value="${returnDate}" required />
+                    <input type="date" id="return" name="return" th:field="*{returnDate}" required />
                 </div>
                 <!-- Add more input fields as needed -->
                 <button type="submit">Book Flight</button>
             </form>
         </div>
+
+
 
 
         <script src="../static/js/homeSearchScript.js"></script>
