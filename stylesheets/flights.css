@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.flight-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.flight-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 100%;
+  max-width: 800px;
+  background-color: rgba(249, 249, 249, 0.8);
+  /* Slightly transparent */
+  border-radius: 15px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Optional shadow for better appearance */
+}
+
+.flight-image img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 10px;
+  /* Optional: rounded corners for images */
+}
+
+.flight-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.flight-details div {
+  margin-bottom: 5px;
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.order-button {
+  display: flex;
+  align-items: center;
+}
+
+.order-button button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  /* Rounded corners for the button */
+  margin-left: 10px;
+}
+
+.order-button button:hover {
+  background-color: #0056b3;
+}
+
+favorite-icon {
+  color: #ff0000;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.favorite-icon:hover {
+  color: #cc0000;
+}
