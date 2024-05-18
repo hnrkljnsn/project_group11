@@ -80,3 +80,21 @@ favorite-icon {
 .favorite-icon:hover {
   color: #cc0000;
 }
+
+.admin-button {
+  display: flex;
+  align-items: center;
+}
+
+.admin-button button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.admin-button button:hover {
+  background-color: #0056b3;
+}
