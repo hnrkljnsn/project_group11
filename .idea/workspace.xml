@@ -6,8 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Made the project Java 17 again.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/stylesheets/ProjectStylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/stylesheets/ProjectStylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/frontend/Stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/flights.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/flights.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/flightsadmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/flightsadmin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/topnav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/topnav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stylesheets/flights.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/stylesheets/flights.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stylesheets/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/stylesheets/login.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,14 +82,17 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\repos\project_group11\src\main\resources\static\stylesheets" />
       <recent name="C:\repos\project_group11\src\main\resources" />
       <recent name="C:\repos\project_group11\src\main\resources\static\js" />
       <recent name="C:\repos\project_group11\src\main\resources\static" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
-      <recent name="$PROJECT_DIR$/src/main/java/no/ntnu/frontend" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="home2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/project_group11/src/main/resources/templates/home2.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="project_group11" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="no.ntnu.Application" />
@@ -98,6 +109,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="JavaScript Debug.home2.html" />
       </list>
     </recent_temporary>
   </component>
