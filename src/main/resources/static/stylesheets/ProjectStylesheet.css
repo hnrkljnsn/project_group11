@@ -59,6 +59,9 @@ p {
     flex-grow: 1;
     justify-content: center;
 }
+.middle-items a:hover {
+    text-decoration: underline;
+}
 .right-items,.middle-items{
     display: flex;
     align-items: center;
@@ -199,21 +202,27 @@ button {
 /* Styling for the grid-section with destinations on homepage*/
 
 .destination-grid-container {
-    margin: 0 auto;
+    margin-top: 5rem;
 }
 
+.destination-category {
+    margin-top: 4rem;
+}
 .destination-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
     justify-content: center;
+}
+
+.destination-category h3 {
 }
 
 .grid-item {
     flex: 1 0 auto; /* Items will grow to fill the space, won't shrink smaller than their content */
     min-width: 200px; /* Items will not shrink smaller than 250px */
     max-width: 250px;
-    height: 200px; /* fixed height */
+    height: 150px; /* fixed height */
     box-sizing: border-box; /* Include padding and borders in the width */
 }
 
@@ -221,6 +230,33 @@ button {
     width: 100%; /* Make the image fill the entire width of the grid-item */
     height: 100%; /* Optional: Set the height to fill the grid-item if aspect ratio is not a concern */
     object-fit: cover; /* This will ensure the image covers the area without stretching */
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Styling for the destination slider below the destination grids*/
+
+.destination-slider {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 200%; /* Adjust based on total width of all slides */
+}
+
+.slide {
+    flex: 0 0 25%; /* Each slide takes up 25% of the slider width */
+    max-width: 25%; /* Ensure each slide's max-width is also limited */
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 
@@ -265,7 +301,7 @@ button {
 }
 
 .footer-column ul li a:hover {
-    color: #ace;
+    text-decoration: underline;
 }
 
 .newsletter {
