@@ -41,20 +41,32 @@
         </div>
         <div class="flight-details">
           <div>
-            <span class="label">Departure Time:</span>
-            <span th:text="${flight.departureTime}"></span>
+            <span class="label">Flight Name:</span>
+            <span th:text="${flight.flightName}"></span>
           </div>
           <div>
-            <span class="label">Arrival Time:</span>
-            <span th:text="${flight.arrivalTime}"></span>
+            <span class="label">From:</span>
+            <span th:text="${flight.from}"></span>
           </div>
           <div>
-            <span class="label">Price:</span>
-            <span th:text="${flight.price}"></span>
+            <span class="label">To:</span>
+            <span th:text="${flight.to}"></span>
+          </div>
+          <div>
+            <span class="label">Travel Dates:</span>
+            <span th:text="${flight.travelDates}"></span>
           </div>
           <div>
             <span class="label">Class:</span>
             <span th:text="${flight.class}"></span>
+          </div>
+          <div>
+            <span class="label">Extra Features:</span>
+            <span th:text="${flight.extraFeatures}"></span>
+          </div>
+          <div>
+            <span class="label">Price:</span>
+            <span th:text="${flight.price}"></span>
           </div>
         </div>
         <div class="admin-button">
@@ -65,7 +77,6 @@
         </div>
       </div>
     </div>
-
 
     <script src="../static/js/homeSearchScript.js"></script>
 
