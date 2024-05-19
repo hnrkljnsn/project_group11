@@ -1,0 +1,37 @@
+.order-details {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.order-details h2 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.order-details p {
+  margin-bottom: 10px;
+}
+
+.order-details span {
+  font-weight: bold;
+}
+
+.flight-image {
+  width: 200px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.flight-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  /* Add some space between the image and the details */
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+</html>
+
+<head>
+  <script src="../static/js/accountCreation.js"></script>
+  <meta charset="UTF-8">
+  <title>FlightFinder</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/ProjectStylesheet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/orders.css">
+
+</head>
+
+
+<div class="container">
+
+  <body>
+    <div class="navigationBar">
+      <div class="left-items">
+        <a href="home.html">Flight Finder</a>
+      </div>
+
+      <div class="middle-items">
+        <a class="active" href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="search.html">Search</a>
+      </div>
+
+      <!-- User Icon -->
+      <a href="login.html" id="userIcon"><i class="fas fa-user"></i></a>
+
+      <!-- Favorite Icon -->
+      <a href="favorites.html" id="favoriteIcon"><i class="fas fa-heart"></i></a>
+
+      <!-- Order Icon -->
+      <a href="orders.html" id="orderIcon"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+
+
+    <!-- Order Details-->
+    <div class="order-details" th:each="order : ${orders}">
+      <img th:src="${order.image}" alt="Flight Image" class="flight-image">
+      <div class="flight-details">
+        <h2 class="flight-name" th:text="${order.flightName}">Flight Name</h2>
+        <p class="from-to">
+          From: <span class="from" th:text="${order.from}">Origin</span> To:
+          <span class="to" th:text="${order.to}">Destination</span>
+        </p>
+        <p class="travel-dates">
+          Travel Dates:
+          <span class="dates" th:text="${order.travelDates}">MM/DD/YYYY - MM/DD/YYYY</span>
+        </p>
+        <p class="class">
+          Class:
+          <span class="class-type" th:text="${order.classType}">Economy/Business/First</span>
+        </p>
+        <p class="extra-features">
+          Extra Features:
+          <span class="features" th:text="${order.extraFeatures}">Feature 1, Feature 2</span>
+        </p>
+        <p class="price">
+          Price: <span class="amount" th:text="${order.price}">$XXX</span>
+        </p>
+      </div>
+    </div>
+
+
+
+
+    <script src="../static/js/homeSearchScript.js"></script>
+
+
+    <footer class="footer">
+      <div class="footer-column">
+        <div class="logo">Flight Finder</div>
+        <div class="copyright">
+          <p>Copyright @ 2024</p>
+        </div>
+      </div>
+
+      <div class="footer-column newsletter">
+        <input type="text" placeholder="Subscribe to our newsletter" />
+        <button>Subscribe</button>
+      </div>
+
+      <div class="footer-column">
+        <h3>About us</h3>
+        <ul>
+          <li><a href="#" th:href="@{/about}">Api copyright</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Overview</h3>
+        <!-- Overview links -->
+      </div>
+
+      <div class="footer-column">
+        <h3>Content</h3>
+        <ul>
+          <li><a href="#" th:href="@{/home}">Home</a></li>
+          <li><a href="#" th:href="@{/about}">About us</a></li>
+          <li><a href="#" th:href="@{/search}">Search</a></li>
+          <li><a href="#" th:href="@{/my-page}">My page</a></li>
+          <li><a href="#" th:href="@{/create-account}">Create Account</a></li>
+        </ul>
+      </div>
+
+      <div class="language-select">
+        <span>Language:</span>
+        <img src="path-to-your-uk-flag-icon.png" alt="English" />
+        <!-- More flags if you want to offer more languages -->
+      </div>
+    </footer>
+  </body>
+</div>
