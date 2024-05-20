@@ -37,7 +37,6 @@ function handleError(error) {
     resultsContainer.innerHTML = "<li>Error loading results</li>";
 }
 
-
 function createFlightInfoString(flight) {
     let imageSrc = 'https://t4.ftcdn.net/jpg/04/38/64/95/360_F_438649569_DsSHTkasH6GqqQXwu7FbRG0OMHstAc2D.jpg';
     return `

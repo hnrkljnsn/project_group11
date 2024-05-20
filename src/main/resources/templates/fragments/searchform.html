@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div th:fragment="searchForm">
+    <form id="searchForm">
+        <label for="departureCity">Departure City</label>
+        <input type="text" id="departureCity" name="departureCity" placeholder="Departure City" required>
+
+        <label for="returnCity">Return City</label>
+        <input type="text" id="returnCity" name="returnCity" placeholder="Return City" required>
+
+        <label for="departureDate">Departure Date</label>
+        <input type="date" id="departureDate" name="departureDate" placeholder="Departure Date" required>
+
+        <label for="returnDate">Return Date</label>
+        <input type="date" id="returnDate" name="returnDate" placeholder="Return Date">
+
+        <button type="submit">Search</button>
+    </form>
+</div>
