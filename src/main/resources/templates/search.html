@@ -3,24 +3,24 @@
 <head>
   <script src="/js/searchScript.js"></script>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>Flight Search Results</title>
   <link rel="stylesheet" type="text/css" href="/stylesheets/ProjectStylesheet.css">
 </head>
 <body>
-    <div class="page-container">
-      <div class="content-wrap">
-        <div th:replace="~{fragments/topnav.html :: navbar}">
-        </div>
+<div class="page-container">
+  <div class="content-wrap">
+    <div th:replace="~{fragments/topnav.html :: navbar}"></div>
 
-        <div class="flight-result-list">
-          <ul class="result-list">
-          </ul>
-        </div>
+    <!-- Ensure the search form is above the result list -->
+      <div th:replace="~{fragments/searchForm.html :: searchForm}"></div>
 
-        <canvas id="myCanvas"></canvas>
-      </div>
-      <div th:replace="~{fragments/footer.html :: footer}">
-      </div>
+    <div class="flight-result-list">
+      <ul class="result-list">
+      </ul>
     </div>
+    <canvas id="myCanvas"></canvas>
+  </div>
+  <div th:replace="~{fragments/footer.html :: footer}"></div>
+</div>
 </body>
 </html>
