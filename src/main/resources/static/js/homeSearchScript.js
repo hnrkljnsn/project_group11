@@ -3,10 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (searchForm) {
         searchForm.addEventListener('submit', function(event) {
             event.preventDefault();
-            const query = document.getElementById('searchQuery').value;
+            const departureCity = document.getElementById('departureCity').value;
+            const returnCity = document.getElementById('returnCity').value;
             const departureDate = document.getElementById('departureDate').value;
             const returnDate = document.getElementById('returnDate').value;
-            window.location.href = `/search.html?query=${encodeURIComponent(query)}&departure=${encodeURIComponent(departureDate)}&return=${encodeURIComponent(returnDate)}`;
+            const queryString = `departureCity=${encodeURIComponent(departureCity)}&returnCity=${encodeURIComponent(returnCity)}&departureDate=${encodeURIComponent(departureDate)}&returnDate=${encodeURIComponent(returnDate)}`;
+            window.location.href = `/search.html?${queryString}`;
         });
     }
 });

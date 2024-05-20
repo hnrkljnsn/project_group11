@@ -1,6 +1,7 @@
 package no.ntnu.backend;
 import org.springframework.data.repository.CrudRepository;
 
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -9,5 +10,6 @@ import java.util.List;
  */
 
 public interface FlightRepository extends CrudRepository<Flight, Integer> {
-    List<Flight> findByAirlineContaining(String airline);
+    List<Flight> findByDepartureCityAndReturnCityAndDepartureDateAndReturnDate(
+            String departureCity, String returnCity, LocalDate departureDate, LocalDate returnDate);
 }
