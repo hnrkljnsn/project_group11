@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Started creating backend for the subscription for newsletter.">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/subscribe.js" afterDir="false" />
+    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Now a database for emails is created and the inputted text is sent from the webapp to sql database. Trying to figure out how to not be able to send any text besides email-addresses.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/SubscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/SubscriptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/subscribe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/subscribe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/stylesheets/ProjectStylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/stylesheets/ProjectStylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +184,14 @@
       <option name="presentableId" value="LOCAL−00008" />
       <updated>1716217412056</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL−00009" summary="Now a database for emails is created and the inputted text is sent from the webapp to sql database. Trying to figure out how to not be able to send any text besides email-addresses.">
+      <option name="closed" value="true" />
+      <created>1716218438263</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1716218438263</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +229,8 @@
     <MESSAGE value="User can now be created from the createaccount.html and is added to the database." />
     <MESSAGE value="After creating user you are now sent to the home page(home.html)." />
     <MESSAGE value="Started creating backend for the subscription for newsletter." />
-    <option name="LAST_COMMIT_MESSAGE" value="Started creating backend for the subscription for newsletter." />
+    <MESSAGE value="Now a database for emails is created and the inputted text is sent from the webapp to sql database. Trying to figure out how to not be able to send any text besides email-addresses." />
+    <option name="LAST_COMMIT_MESSAGE" value="Now a database for emails is created and the inputted text is sent from the webapp to sql database. Trying to figure out how to not be able to send any text besides email-addresses." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

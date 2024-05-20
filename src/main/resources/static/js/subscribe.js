@@ -1,5 +1,14 @@
 async function subscribeNewsletter() {
-    const email = document.getElementById('newsletter-email').value;
+    const emailInput = document.getElementById('newsletter-email');
+    const email = emailInput.value;
+
+    // Simple email regex for basic validation created with the help of ChatGPT 3.5
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (!emailPattern.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
 
     const data = { email };
 
