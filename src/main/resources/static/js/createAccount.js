@@ -15,6 +15,7 @@ async function createAccount() {
 
         if (response.ok) {
             alert('Account created successfully!');
+            window.location.href = 'home.html';
         } else {
             alert('Failed to create account');
         }
