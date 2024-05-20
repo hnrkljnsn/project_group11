@@ -1,5 +1,3 @@
-// File: SubscriptionController.java
-
 package no.ntnu.backend;
 
 import org.springframework.beans.factory.annotation.Autowired;

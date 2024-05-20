@@ -1,4 +1,5 @@
 <div th:fragment="footer">
+    <script src="/js/subscribe.js"></script>
     <footer class="footer">
         <div class="footer-column">
             <div class="logo">Flight Finder</div>
@@ -8,8 +9,8 @@
         </div>
 
         <div class="footer-column newsletter">
-            <input type="email" placeholder="Subscribe to our newsletter">
-            <button>Subscribe</button>
+            <input type="email" id ="newsletter-email" placeholder="Subscribe to our newsletter">
+            <button onclick="subscribeNewsletter()">Subscribe</button>
         </div>
 
         <div class="footer-column">
