@@ -36,5 +36,8 @@ public class PageController {
         return "flights";
     }
 
+    @GetMapping("/createaccount.html")
+    public String getCreateAccount(){return "createaccount";}
+
 
 }
