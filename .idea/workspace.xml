@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Now a database for emails is created and the inputted text is sent from the webapp to sql database. Trying to figure out how to not be able to send any text besides email-addresses.">
+    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Now only able to send email-addresses in the subscription field.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/subscribe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/subscribe.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/stylesheets/ProjectStylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/stylesheets/ProjectStylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +189,14 @@
       <option name="presentableId" value="LOCAL−00009" />
       <updated>1716218438263</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL−00010" summary="Now only able to send email-addresses in the subscription field.">
+      <option name="closed" value="true" />
+      <created>1716219297437</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1716219297437</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +235,8 @@
     <MESSAGE value="After creating user you are now sent to the home page(home.html)." />
     <MESSAGE value="Started creating backend for the subscription for newsletter." />
     <MESSAGE value="Now a database for emails is created and the inputted text is sent from the webapp to sql database. Trying to figure out how to not be able to send any text besides email-addresses." />
-    <option name="LAST_COMMIT_MESSAGE" value="Now a database for emails is created and the inputted text is sent from the webapp to sql database. Trying to figure out how to not be able to send any text besides email-addresses." />
+    <MESSAGE value="Now only able to send email-addresses in the subscription field." />
+    <option name="LAST_COMMIT_MESSAGE" value="Now only able to send email-addresses in the subscription field." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

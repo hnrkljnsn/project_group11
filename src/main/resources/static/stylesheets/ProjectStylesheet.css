@@ -314,6 +314,7 @@ button {
     border: none;
     border-radius: 4px;
     margin-right: 10px;
+    width: 100%;
 }
 
 .newsletter button {
