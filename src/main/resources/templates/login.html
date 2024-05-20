@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <script src="/js/homeSearchScript.js"></script>
-  <script src="/js/login.js"></script>
+  <script src="/js/loginScript.js"></script>
   <meta charset="UTF-8">
   <title>FlightFinder</title>
   <link rel="stylesheet" type="text/css" href="/stylesheets/ProjectStylesheet.css">
@@ -18,9 +18,11 @@
     <!-- Login Page -->
     <div class="login-container">
       <div class="login-title">Login</div>
-      <input type="text" class="login-input" placeholder="Username">
-      <input type="password" class="login-input" placeholder="Password">
-      <button class="login-button">Login</button>
+      <form id="loginForm">
+        <input type="text" id="username" class="login-input" placeholder="Username">
+        <input type="password" id="password" class="login-input" placeholder="Password">
+        <button type="submit" class="login-button">Login</button>
+      </form>
       <div class="login-text">or</div>
       <div class="login-links">
         <button class="login-button-create" onclick="window.location.href='createaccount.html'">Create Account</button>
