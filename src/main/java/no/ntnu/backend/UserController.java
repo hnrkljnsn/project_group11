@@ -12,7 +12,7 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    @PostMapping("/createaccount")
+    @PostMapping("/create-account")
     public ResponseEntity<String> createAccount(@RequestBody User user) {
         if (userRepository.findByUsername(user.getUsername()) != null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Username already exists");
