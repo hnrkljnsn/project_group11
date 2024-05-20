@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Made the project Java 17 again.">
+    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="After creating user you are now sent to the home page(home.html).">
+      <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/Subscription.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/SubscriptionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/topnav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/topnav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +20,9 @@
       <list>
         <option value="CSS File" />
         <option value="Interface" />
-        <option value="Class" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -57,7 +59,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "frontend",
+    "git-widget-placeholder": "development",
     "last_opened_file_path": "/Users/henrikloejensen/Documents/project_group11/src/main/java/no/ntnu/frontend",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -147,7 +149,35 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1710839768576</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="Started making script for creating an account.">
+      <option name="closed" value="true" />
+      <created>1716204766638</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1716204766638</updated>
+    </task>
+    <task id="LOCAL−00005" summary="Made UserController class and some changes in UserRepository">
+      <option name="closed" value="true" />
+      <created>1716206297456</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1716206297456</updated>
+    </task>
+    <task id="LOCAL−00006" summary="User can now be created from the createaccount.html and is added to the database.">
+      <option name="closed" value="true" />
+      <created>1716208368311</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1716208368311</updated>
+    </task>
+    <task id="LOCAL−00007" summary="After creating user you are now sent to the home page(home.html).">
+      <option name="closed" value="true" />
+      <created>1716208531284</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1716208531284</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,7 +210,11 @@
     <MESSAGE value="Created the necessary files to start coding frontende + separate directories for backend and frontend" />
     <MESSAGE value="Finally able to make the project into a spring project. Will use the web resource spring initializer next time..." />
     <MESSAGE value="Got a springboot warning when navigating the menu of the website. Turns out the &lt;nav th:insert needs to be wrapped as such:  &quot;~{...}&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Got a springboot warning when navigating the menu of the website. Turns out the &lt;nav th:insert needs to be wrapped as such:  &quot;~{...}&quot;" />
+    <MESSAGE value="Started making script for creating an account." />
+    <MESSAGE value="Made UserController class and some changes in UserRepository" />
+    <MESSAGE value="User can now be created from the createaccount.html and is added to the database." />
+    <MESSAGE value="After creating user you are now sent to the home page(home.html)." />
+    <option name="LAST_COMMIT_MESSAGE" value="After creating user you are now sent to the home page(home.html)." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
