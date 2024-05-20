@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="/js/accountCreation.js"></script>
     <script src="/js/homeSearchScript.js"></script>
     <meta charset="UTF-8">
     <title>FlightFinder</title>
@@ -18,9 +17,9 @@
         <!-- Login Page -->
         <div class="login-container">
             <div class="login-title">Create Account</div>
-            <input type="text" class="login-input" placeholder="Username">
-            <input type="password" class="login-input" placeholder="Password">
-            <button class="login-button-create">Create Account</button>
+            <input type="text" class="login-input" id="username" placeholder="Username">
+            <input type="password" class="login-input" id="password" placeholder="Password">
+            <button class="login-button-create" onclick="createAccount()">Create Account</button>
             <div class="login-text">or</div>
             <div class="login-links">
                 <button class="login-button" onclick="window.location.href='login.html'">Go back to login</button>
