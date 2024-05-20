@@ -21,19 +21,14 @@ public class PageController {
         return "search";
     }
 
-    @GetMapping("/flightsadmin.html")
-    public String getFlightsadmin() {
-        return "flightsadmin";
-    }
-
     @GetMapping("/login.html")
     public String getLogin() {
         return "login";
     }
 
-    @GetMapping("/flights.html")
-    public String getFlights() {
-        return "flights";
+    @GetMapping("/flightdetails.html")
+    public String getFlightDetails() {
+        return "flightdetails";
     }
 
     @GetMapping("/createaccount.html")
