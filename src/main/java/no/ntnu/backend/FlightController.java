@@ -22,7 +22,7 @@ public class FlightController {
         if (query == null || query.trim().isEmpty()) {
             return ResponseEntity.ok((List<Flight>) flightRepository.findAll());
         }
-        List<Flight> flights = flightRepository.findByFlightNameContaining(query);
+        List<Flight> flights = flightRepository.findByAirlineContaining(query);
         return ResponseEntity.ok(flights);
     }
 }

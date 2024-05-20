@@ -9,5 +9,5 @@ import java.util.List;
  */
 
 public interface FlightRepository extends CrudRepository<Flight, Integer> {
-    List<Flight> findByFlightNameContaining(String flightName);
+    List<Flight> findByAirlineContaining(String airline);
 }

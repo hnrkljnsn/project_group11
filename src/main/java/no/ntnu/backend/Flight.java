@@ -12,11 +12,13 @@ public class Flight {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int flightId;
-    public String flightName;
+    public String airline;
     public boolean roundTrip;
+    public String departureCity;
+    public String returnCity;
     public LocalDate departureDate;
     public LocalDate returnDate;
-
+    public int price;
 
     public int getFlightId() {
         return flightId;
@@ -26,12 +28,12 @@ public class Flight {
         this.flightId = flightId;
     }
 
-    public String getFlightName() {
-        return flightName;
+    public String getAirline() {
+        return airline;
     }
 
-    public void setFlightName(String flightName) {
-        this.flightName = flightName;
+    public void setAirline(String airline) {
+        this.airline = airline;
     }
 
     public boolean isRoundTrip() {
@@ -40,6 +42,22 @@ public class Flight {
 
     public void setRoundTrip(boolean roundTrip) {
         this.roundTrip = roundTrip;
+    }
+
+    public String getDepartureCity() {
+        return departureCity;
+    }
+
+    public void setDepartureCity(String departureCity) {
+        this.departureCity = departureCity;
+    }
+
+    public String getReturnCity() {
+        return returnCity;
+    }
+
+    public void setReturnCity(String returnCity) {
+        this.returnCity = returnCity;
     }
 
     public LocalDate getDepartureDate() {
@@ -56,5 +74,13 @@ public class Flight {
 
     public void setReturnDate(LocalDate returnDate) {
         this.returnDate = returnDate;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 }
