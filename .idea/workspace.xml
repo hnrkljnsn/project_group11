@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/UserFlight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/UserFlightRepository.java" afterDir="false" />
+    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="A user can now have multiple favorite flights. They show up in  favorites.html when you log in.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/DummyUserFavoritesInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/DummyUserFavoritesInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/favoritesScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/favoritesScript.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/favorites.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/favorites.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +204,14 @@
       <option name="presentableId" value="LOCAL−00011" />
       <updated>1716219897692</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL−00012" summary="A user can now have multiple favorite flights. They show up in  favorites.html when you log in.">
+      <option name="closed" value="true" />
+      <created>1716308683218</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1716308683218</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +282,8 @@
     <MESSAGE value="Now a database for emails is created and the inputted text is sent from the webapp to sql database. Trying to figure out how to not be able to send any text besides email-addresses." />
     <MESSAGE value="Now only able to send email-addresses in the subscription field." />
     <MESSAGE value="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)" />
+    <MESSAGE value="A user can now have multiple favorite flights. They show up in  favorites.html when you log in." />
+    <option name="LAST_COMMIT_MESSAGE" value="A user can now have multiple favorite flights. They show up in  favorites.html when you log in." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
