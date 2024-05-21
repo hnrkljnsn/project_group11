@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)">
+    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Added postmapping functions to usercontroller to add and get favorite flights.">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/favorites.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/loginScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/loginScript.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +205,21 @@
       <option name="presentableId" value="LOCAL−00011" />
       <updated>1716219897692</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL−00012" summary="Started creating an alternative to displaying favorite flights for users.">
+      <option name="closed" value="true" />
+      <created>1716290162645</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1716290162645</updated>
+    </task>
+    <task id="LOCAL−00013" summary="Added postmapping functions to usercontroller to add and get favorite flights.">
+      <option name="closed" value="true" />
+      <created>1716290779245</created>
+      <option name="number" value="LOCAL−00013" />
+      <option name="presentableId" value="LOCAL−00013" />
+      <updated>1716290779245</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +290,9 @@
     <MESSAGE value="Now a database for emails is created and the inputted text is sent from the webapp to sql database. Trying to figure out how to not be able to send any text besides email-addresses." />
     <MESSAGE value="Now only able to send email-addresses in the subscription field." />
     <MESSAGE value="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)" />
+    <MESSAGE value="Started creating an alternative to displaying favorite flights for users." />
+    <MESSAGE value="Added postmapping functions to usercontroller to add and get favorite flights." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added postmapping functions to usercontroller to add and get favorite flights." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

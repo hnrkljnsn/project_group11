@@ -15,9 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             body: JSON.stringify({ username, password })
         })
-            .then(response => {
-                if (response.ok) {
-                    window.location.href = 'home.html';
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'Login successful') {
+                    window.location.href = `favorites.html?userId=${data.userId}`;
                 } else {
                     alert('Login failed');
                 }

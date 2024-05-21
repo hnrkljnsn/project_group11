@@ -34,5 +34,8 @@ public class PageController {
     @GetMapping("/createaccount.html")
     public String getCreateAccount(){return "createaccount";}
 
+    @GetMapping("/favorites.html")
+    public String getFavorites(){return "favorites";}
+
 
 }
