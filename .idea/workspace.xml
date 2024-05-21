@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="A user can now have multiple favorite flights. They show up in  favorites.html when you log in.">
+    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Started creating logic for removing and adding flights from favorites.">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/flightDetailsScript.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/favoritesScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/favoritesScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/favorites.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/favorites.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/searchScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/searchScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/flightdetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/flightdetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/search.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,17 +20,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="Class" />
         <option value="Interface" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="frontend" />
+        <entry key="$PROJECT_DIR$" value="development" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -126,6 +128,7 @@
       <workItem from="1714236630980" duration="8998000" />
       <workItem from="1714386028523" duration="8039000" />
       <workItem from="1715783320733" duration="617000" />
+      <workItem from="1716319195457" duration="4861000" />
     </task>
     <task id="LOCAL−00001" summary="Created the necessary files to start coding frontende + separate directories for backend and frontend">
       <option name="closed" value="true" />
