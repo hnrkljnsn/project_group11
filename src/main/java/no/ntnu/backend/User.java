@@ -43,11 +43,13 @@ public class User
         this.password = password;
     }
 
-    public List<Flight> getFavoriteFlights() {
+    public List<Flight> getFavoriteFlights()
+    {
         return favoriteFlights;
     }
 
-    public void setFavoriteFlights(List<Flight> favoriteFlights) {
+    public void setFavoriteFlights(List<Flight> favoriteFlights)
+    {
         this.favoriteFlights = favoriteFlights;
     }
 }
