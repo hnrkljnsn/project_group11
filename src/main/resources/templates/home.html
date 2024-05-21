@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <script src="/js/homeSearchScript.js"></script>
+    <script src="/js/script.js"></script>
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/ProjectStylesheet.css">
@@ -61,9 +62,11 @@
                             </div>
                         </div>
                     </section>
+
                     <section class="destination-category">
                         <h3>Browse destinations</h3>
                         <div class="destination-slider">
+                            <button class="slider-button prev" onclick="moveSlide(-1)">&#10094;</button>
                             <div class="slides">
                                 <div class="slide"><img src="https://t4.ftcdn.net/jpg/04/38/64/95/360_F_438649569_DsSHTkasH6GqqQXwu7FbRG0OMHstAc2D.jpg" alt="Image 1" /></div>
                                 <div class="slide"><img src="https://raw.githubusercontent.com/hnrkljnsn/project_group11/main/img/pixlr-image-generator-f376714d-9e3b-465d-be85-f3177abebe3c%201.png" alt="Image 2" /></div>
@@ -72,10 +75,10 @@
                                 <div class="slide"><img src="https://t4.ftcdn.net/jpg/04/38/64/95/360_F_438649569_DsSHTkasH6GqqQXwu7FbRG0OMHstAc2D.jpg" alt="Image 5" /></div>
                                 <div class="slide"><img src="https://raw.githubusercontent.com/hnrkljnsn/project_group11/main/img/pixlr-image-generator-f376714d-9e3b-465d-be85-f3177abebe3c%201.png" alt="Image 6" /></div>
                             </div>
+                            <button class="slider-button next" onclick="moveSlide(1)">&#10095;</button>
                         </div>
                     </section>
                 </div>
-
 
             <canvas id="myCanvas"></canvas>
         </div>
