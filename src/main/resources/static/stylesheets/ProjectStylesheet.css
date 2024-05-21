@@ -234,9 +234,30 @@ button {
     cursor: pointer;
 }
 
-/* Styling for the destination slider below the destination grids*/
+/* Styling for slider navigation buttons */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
 
+.slider-button.prev {
+    left: 0;
+}
+
+.slider-button.next {
+    right: 0;
+}
+
+/* Adjustments to existing slider styles */
 .destination-slider {
+    position: relative; /* Ensure buttons are positioned relative to the slider */
     overflow: hidden;
     width: 100%;
 }
@@ -244,19 +265,13 @@ button {
 .slides {
     display: flex;
     transition: transform 0.5s ease;
-    width: 200%; /* Adjust based on total width of all slides */
+    width: calc(100% * 6); /* Total width for 6 slides, adjust based on number of slides */
 }
 
 .slide {
-    flex: 0 0 25%; /* Each slide takes up 25% of the slider width */
-    max-width: 25%; /* Ensure each slide's max-width is also limited */
+    flex: 0 0 16.6666%; /* Adjust to match the number of slides visible at once */
+    max-width: 16.6666%; /* Adjust to match the number of slides visible at once */
     box-sizing: border-box;
-}
-
-.slide img {
-    width: 100%;
-    height: auto;
-    display: block;
 }
 
 

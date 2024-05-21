@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Added favorites redirection to loginscript. Created html for displaying favorites.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/DummyUserFavoritesInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/favoritesScript.js" afterDir="false" />
+    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/favorites.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/favorites.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/searchScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/searchScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/stylesheets/ProjectStylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/stylesheets/ProjectStylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/searchform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searchform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/search.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,17 +21,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Interface" />
-        <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="3d08ce13e95d66dfe85e2c6c2478d38d3c2c5eb9" />
+        <entry key="$PROJECT_DIR$" value="frontend" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -206,28 +207,7 @@
       <option name="presentableId" value="LOCAL−00011" />
       <updated>1716219897692</updated>
     </task>
-    <task id="LOCAL−00012" summary="Started creating an alternative to displaying favorite flights for users.">
-      <option name="closed" value="true" />
-      <created>1716290162645</created>
-      <option name="number" value="LOCAL−00012" />
-      <option name="presentableId" value="LOCAL−00012" />
-      <updated>1716290162645</updated>
-    </task>
-    <task id="LOCAL−00013" summary="Added postmapping functions to usercontroller to add and get favorite flights.">
-      <option name="closed" value="true" />
-      <created>1716290779245</created>
-      <option name="number" value="LOCAL−00013" />
-      <option name="presentableId" value="LOCAL−00013" />
-      <updated>1716290779245</updated>
-    </task>
-    <task id="LOCAL−00014" summary="Added favorites redirection to loginscript. Created html for displaying favorites.">
-      <option name="closed" value="true" />
-      <created>1716291096326</created>
-      <option name="number" value="LOCAL−00014" />
-      <option name="presentableId" value="LOCAL−00014" />
-      <updated>1716291096326</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,12 +226,12 @@
               </RecentGroup>
               <RecentGroup>
                 <option name="FILTER_VALUES">
-                  <option value="*" />
+                  <option value="mkbrun" />
                 </option>
               </RecentGroup>
               <RecentGroup>
                 <option name="FILTER_VALUES">
-                  <option value="mkbrun" />
+                  <option value="*" />
                 </option>
               </RecentGroup>
               <RecentGroup>
@@ -298,10 +278,7 @@
     <MESSAGE value="Now a database for emails is created and the inputted text is sent from the webapp to sql database. Trying to figure out how to not be able to send any text besides email-addresses." />
     <MESSAGE value="Now only able to send email-addresses in the subscription field." />
     <MESSAGE value="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)" />
-    <MESSAGE value="Started creating an alternative to displaying favorite flights for users." />
-    <MESSAGE value="Added postmapping functions to usercontroller to add and get favorite flights." />
-    <MESSAGE value="Added favorites redirection to loginscript. Created html for displaying favorites." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added favorites redirection to loginscript. Created html for displaying favorites." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
