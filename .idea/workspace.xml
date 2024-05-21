@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/searchScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/searchScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/stylesheets/ProjectStylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/stylesheets/ProjectStylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/searchform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searchform.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/search.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="frontend" />
+        <entry key="$PROJECT_DIR$" value="3d08ce13e95d66dfe85e2c6c2478d38d3c2c5eb9" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -226,12 +221,12 @@
               </RecentGroup>
               <RecentGroup>
                 <option name="FILTER_VALUES">
-                  <option value="mkbrun" />
+                  <option value="*" />
                 </option>
               </RecentGroup>
               <RecentGroup>
                 <option name="FILTER_VALUES">
-                  <option value="*" />
+                  <option value="mkbrun" />
                 </option>
               </RecentGroup>
               <RecentGroup>

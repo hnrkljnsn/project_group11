@@ -1,9 +1,8 @@
 package no.ntnu.backend;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class User
@@ -16,6 +15,9 @@ public class User
     /*
     public boolean admin; (?)
      */
+
+    @OneToMany
+    private List<Flight> favoriteFlights;
 
     public int getUserId() {
         return userId;
@@ -39,6 +41,14 @@ public class User
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public List<Flight> getFavoriteFlights() {
+        return favoriteFlights;
+    }
+
+    public void setFavoriteFlights(List<Flight> favoriteFlights) {
+        this.favoriteFlights = favoriteFlights;
     }
 }
 
