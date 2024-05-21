@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/UserFlight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/UserFlightRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/account.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/DummyUserFavoritesInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/DummyUserFavoritesInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/favorites.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/favorites.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +18,9 @@
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="Class" />
         <option value="Interface" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
