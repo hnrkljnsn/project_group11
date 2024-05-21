@@ -4,7 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
@@ -24,18 +27,23 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody User user) {
+    public ResponseEntity<Map<String, Object>> login(@RequestBody User user) {
         User existingUser = userRepository.findByUsername(user.getUsername());
         if (existingUser != null && existingUser.getPassword().equals(user.getPassword())) {
-            return ResponseEntity.ok("Login successful");
+            Map<String, Object> response = new HashMap<>();
+            response.put("status", "Login successful");
+            response.put("userId", existingUser.getUserId());
+            return ResponseEntity.ok(response);
         } else {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username or password");
+            Map<String, Object> response = new HashMap<>();
+            response.put("status", "Invalid username or password");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
         }
     }
 
     @PostMapping("/{userId}/favorite-flights")
     public ResponseEntity<String> addFavoriteFlight(@PathVariable int userId, @RequestBody Flight flight) {
-        User user = userRepository.findById((long) userId).orElse(null);
+        User user = userRepository.findById((long)userId).orElse(null);
         if (user != null) {
             flightRepository.save(flight);
             user.getFavoriteFlights().add(flight);
@@ -48,9 +56,11 @@ public class UserController {
 
     @GetMapping("/{userId}/favorite-flights")
     public ResponseEntity<List<Flight>> getFavoriteFlights(@PathVariable int userId) {
-        User user = userRepository.findById((long) userId).orElse(null);
+        User user = userRepository.findById((long)userId).orElse(null);
         if (user != null) {
-            return ResponseEntity.ok(user.getFavoriteFlights());
+            List<Flight> favoriteFlights = user.getFavoriteFlights();
+            favoriteFlights.size();
+            return ResponseEntity.ok(favoriteFlights);
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }

@@ -16,7 +16,7 @@ public class User
     public boolean admin; (?)
      */
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     private List<Flight> favoriteFlights;
 
     public int getUserId() {
