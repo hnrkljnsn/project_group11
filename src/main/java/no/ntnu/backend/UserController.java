@@ -6,8 +6,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api")
@@ -15,7 +16,12 @@ public class UserController {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
     private FlightRepository flightRepository;
+
+    @Autowired
+    private UserFlightRepository userFlightRepository;
 
     @PostMapping("/create-account")
     public ResponseEntity<String> createAccount(@RequestBody User user) {
@@ -42,12 +48,19 @@ public class UserController {
     }
 
     @PostMapping("/{userId}/favorite-flights")
-    public ResponseEntity<String> addFavoriteFlight(@PathVariable int userId, @RequestBody Flight flight) {
+    public ResponseEntity<String> addFavoriteFlight(@PathVariable int userId, @RequestBody Flight flight)
+    {
+
         User user = userRepository.findById((long)userId).orElse(null);
         if (user != null) {
-            flightRepository.save(flight);
-            user.getFavoriteFlights().add(flight);
-            userRepository.save(user);
+            flightRepository.save(flight);  // Save the flight first
+
+            UserFlight userFlight = new UserFlight();
+            userFlight.setUser(user);
+            userFlight.setFlight(flight);
+
+            userFlightRepository.save(userFlight);
+
             return ResponseEntity.ok("Flight added to favorites");
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
@@ -55,11 +68,13 @@ public class UserController {
     }
 
     @GetMapping("/{userId}/favorite-flights")
-    public ResponseEntity<List<Flight>> getFavoriteFlights(@PathVariable int userId) {
+    public ResponseEntity<Set<Flight>> getFavoriteFlights(@PathVariable int userId) {
         User user = userRepository.findById((long)userId).orElse(null);
         if (user != null) {
-            List<Flight> favoriteFlights = user.getFavoriteFlights();
-            favoriteFlights.size();
+            Set<UserFlight> userFlights = user.getFavoriteFlights();
+            Set<Flight> favoriteFlights = userFlights.stream()
+                    .map(UserFlight::getFlight)
+                    .collect(Collectors.toSet());
             return ResponseEntity.ok(favoriteFlights);
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);

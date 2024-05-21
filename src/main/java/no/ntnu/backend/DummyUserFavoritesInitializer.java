@@ -19,6 +19,9 @@ public class DummyUserFavoritesInitializer implements ApplicationListener<Applic
     @Autowired
     private FlightRepository flightRepository;
 
+    @Autowired
+    private UserFlightRepository userFlightRepository;
+
     private final Logger logger = LoggerFactory.getLogger("DummyUserFavorites");
 
     @Override
@@ -33,15 +36,23 @@ public class DummyUserFavoritesInitializer implements ApplicationListener<Applic
             User user2 = users.get(1);
             User user3 = users.get(2);
 
-            user1.setFavoriteFlights(Collections.singletonList(flights.get(0)));
-            user2.setFavoriteFlights(Collections.singletonList(flights.get(1)));
-            user3.setFavoriteFlights(Collections.singletonList(flights.get(2)));
-
-            userRepository.saveAll(Arrays.asList(user1, user2, user3));
+            // Create and save UserFlight relationships
+            createAndSaveUserFlight(user1, flights.get(0));
+            createAndSaveUserFlight(user1, flights.get(1));
+            createAndSaveUserFlight(user2, flights.get(2));
+            createAndSaveUserFlight(user3, flights.get(1));
+            createAndSaveUserFlight(user3, flights.get(2));
 
             logger.info("Favorite flights set for users.");
         } else {
             logger.warn("Not enough users or flights to set favorite flights.");
         }
+    }
+
+    private void createAndSaveUserFlight(User user, Flight flight) {
+        UserFlight userFlight = new UserFlight();
+        userFlight.setUser(user);
+        userFlight.setFlight(flight);
+        userFlightRepository.save(userFlight);
     }
 }

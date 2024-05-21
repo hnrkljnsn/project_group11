@@ -1,23 +1,19 @@
 package no.ntnu.backend;
 
 import jakarta.persistence.*;
-
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
-public class User
-{
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int userId;
     public String username;
     public String password;
-    /*
-    public boolean admin; (?)
-     */
 
-    @OneToMany(fetch = FetchType.EAGER)
-    private List<Flight> favoriteFlights;
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "user")
+    private Set<UserFlight> favoriteFlights = new HashSet<>();
 
     public int getUserId() {
         return userId;
@@ -43,14 +39,11 @@ public class User
         this.password = password;
     }
 
-    public List<Flight> getFavoriteFlights()
-    {
+    public Set<UserFlight> getFavoriteFlights() {
         return favoriteFlights;
     }
 
-    public void setFavoriteFlights(List<Flight> favoriteFlights)
-    {
+    public void setFavoriteFlights(Set<UserFlight> favoriteFlights) {
         this.favoriteFlights = favoriteFlights;
     }
 }
-

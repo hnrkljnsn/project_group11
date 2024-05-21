@@ -9,21 +9,16 @@
 <body>
 <div class="page-container">
   <div class="content-wrap">
-    <div th:replace="~{fragments/topnav.html :: navbar}">
-    </div>
+    <div th:replace="~{fragments/topnav.html :: navbar}"></div>
     <div class="page-container">
       <div class="content-wrap">
         <div class="favorites-title">Your Favorite Flights:</div>
         <ul id="favoriteFlightsList"></ul>
       </div>
     </div>
-
-
-
     <canvas id="myCanvas"></canvas>
   </div>
-  <div th:replace="~{fragments/footer.html :: footer}">
-  </div>
+  <div th:replace="~{fragments/footer.html :: footer}"></div>
 </div>
 </body>
 </html>
