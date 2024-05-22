@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Started creating logic for removing and adding flights from favorites.">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/flightDetailsScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/searchScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/searchScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/flightdetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/flightdetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/DummyUserFavoritesInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/DummyUserFavoritesInitializer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

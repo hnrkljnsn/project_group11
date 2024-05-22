@@ -7,8 +7,6 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 @Component
@@ -32,21 +30,28 @@ public class DummyUserFavoritesInitializer implements ApplicationListener<Applic
         List<Flight> flights = (List<Flight>) flightRepository.findAll();
 
         if (users.size() >= 3 && flights.size() >= 3) {
-            User user1 = users.get(0);
-            User user2 = users.get(1);
-            User user3 = users.get(2);
+            if (!userFlightsAlreadyExist()) {
+                User user1 = users.get(0);
+                User user2 = users.get(1);
+                User user3 = users.get(2);
 
-            // Create and save UserFlight relationships
-            createAndSaveUserFlight(user1, flights.get(0));
-            createAndSaveUserFlight(user1, flights.get(1));
-            createAndSaveUserFlight(user2, flights.get(2));
-            createAndSaveUserFlight(user3, flights.get(1));
-            createAndSaveUserFlight(user3, flights.get(2));
+                createAndSaveUserFlight(user1, flights.get(0));
+                createAndSaveUserFlight(user1, flights.get(1));
+                createAndSaveUserFlight(user2, flights.get(2));
+                createAndSaveUserFlight(user3, flights.get(1));
+                createAndSaveUserFlight(user3, flights.get(2));
 
-            logger.info("Favorite flights set for users.");
+                logger.info("Favorite flights set for users.");
+            } else {
+                logger.info("Favorite flights already set for users.");
+            }
         } else {
             logger.warn("Not enough users or flights to set favorite flights.");
         }
+    }
+
+    private boolean userFlightsAlreadyExist() {
+        return userFlightRepository.count() > 0;
     }
 
     private void createAndSaveUserFlight(User user, Flight flight) {
