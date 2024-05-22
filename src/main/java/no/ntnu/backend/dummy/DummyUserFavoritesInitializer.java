@@ -3,8 +3,8 @@ package no.ntnu.backend.dummy;
 import no.ntnu.backend.model.Flight;
 import no.ntnu.backend.model.User;
 import no.ntnu.backend.model.FavoriteFlight;
+import no.ntnu.repository.FavoriteFlightRepository;
 import no.ntnu.repository.FlightRepository;
-import no.ntnu.repository.UserFlightRepository;
 import no.ntnu.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +24,7 @@ public class DummyUserFavoritesInitializer implements ApplicationListener<Applic
     private FlightRepository flightRepository;
 
     @Autowired
-    private UserFlightRepository userFlightRepository;
+    private FavoriteFlightRepository favoriteFlightRepository;
 
     private final Logger logger = LoggerFactory.getLogger("DummyUserFavorites");
 
@@ -57,6 +57,6 @@ public class DummyUserFavoritesInitializer implements ApplicationListener<Applic
         FavoriteFlight favoriteFlight = new FavoriteFlight();
         favoriteFlight.setUser(user);
         favoriteFlight.setFlight(flight);
-        userFlightRepository.save(favoriteFlight);
+        favoriteFlightRepository.save(favoriteFlight);
     }
 }

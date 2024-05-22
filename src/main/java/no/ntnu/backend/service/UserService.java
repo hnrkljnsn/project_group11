@@ -20,7 +20,7 @@ public class UserService {
         return this.userRepository.findAll();
     }
 
-    public Optional<User> getUserById(Long id) {
+    public Optional<User> getUserById(int id) {
         return this.userRepository.findById(id);
     }
 }

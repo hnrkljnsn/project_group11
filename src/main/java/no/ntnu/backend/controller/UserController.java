@@ -1,17 +1,21 @@
 package no.ntnu.backend.controller;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import no.ntnu.backend.model.Flight;
 import no.ntnu.backend.model.User;
 import no.ntnu.backend.model.FavoriteFlight;
 import no.ntnu.backend.security.JwtUtil;
 import no.ntnu.backend.service.UserService;
+import no.ntnu.repository.FavoriteFlightRepository;
 import no.ntnu.repository.FlightRepository;
-import no.ntnu.repository.UserFlightRepository;
 import no.ntnu.repository.UserRepository;
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,30 +23,16 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @RestController
+@AllArgsConstructor
 @RequestMapping("/api")
 public class UserController {
 
     private final UserRepository userRepository;
     private final FlightRepository flightRepository;
-    private final UserFlightRepository userFlightRepository;
     private final JwtUtil jwtUtil;
     private final PasswordEncoder passwordEncoder;
     private final UserService userService;
-
-    @Autowired
-    public UserController(UserRepository userRepository,
-                          FlightRepository flightRepository,
-                          UserFlightRepository userFlightRepository,
-                          JwtUtil jwtUtil,
-                          PasswordEncoder passwordEncoder,
-                          UserService userService) {
-        this.userRepository = userRepository;
-        this.flightRepository = flightRepository;
-        this.userFlightRepository = userFlightRepository;
-        this.jwtUtil = jwtUtil;
-        this.passwordEncoder = passwordEncoder;
-        this.userService = userService;
-    }
+    private final FavoriteFlightRepository favoriteFlightRepository;
 
     @PostMapping("/create-account")
     public ResponseEntity<String> createAccount(@RequestBody User user) {
@@ -69,48 +59,27 @@ public class UserController {
         }
     }
 
-    @GetMapping("/account/{id}")
-    public ResponseEntity<?> getAccount(@PathVariable("id") Long id) {
-        ResponseEntity response;
-        Optional<User> userOptional = this.userService.getUserById(id);
-        if (userOptional.isPresent()) {
-            User user = userOptional.get();
-            return new ResponseEntity(user, HttpStatus.OK);
-        } else {
-            response = new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-        return response;
+    @GetMapping("/account")
+    public User getLoggedInUserProfile(@AuthenticationPrincipal User user) {
+        return user;
     }
 
     @PostMapping("/{userId}/favorite-flights")
     public ResponseEntity<String> addFavoriteFlight(@PathVariable int userId, @RequestBody Flight flight) {
-        User user = userRepository.findById((long) userId).orElse(null);
-        if (user != null) {
+        Optional<User> userOp = userRepository.findById(userId);
+        if (userOp.isPresent()) {
+            User user = userOp.get();
             flightRepository.save(flight);
 
             FavoriteFlight favoriteFlight = new FavoriteFlight();
             favoriteFlight.setUser(user);
             favoriteFlight.setFlight(flight);
 
-            userFlightRepository.save(favoriteFlight);
+            favoriteFlightRepository.save(favoriteFlight);
 
             return ResponseEntity.ok("Flight added to favorites");
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
-        }
-    }
-
-    @GetMapping("/{userId}/favorite-flights")
-    public ResponseEntity<Set<Flight>> getFavoriteFlights(@PathVariable int userId) {
-        User user = userRepository.findById((long) userId).orElse(null);
-        if (user != null) {
-            Set<FavoriteFlight> userFlights = user.getFavoriteFlights();
-            Set<Flight> favoriteFlights = userFlights.stream()
-                    .map(FavoriteFlight::getFlight)
-                    .collect(Collectors.toSet());
-            return ResponseEntity.ok(favoriteFlights);
-        } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
     }
 }
