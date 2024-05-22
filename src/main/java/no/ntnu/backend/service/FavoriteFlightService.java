@@ -1,7 +1,6 @@
 package no.ntnu.backend.service;
 
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import no.ntnu.backend.model.FavoriteFlight;
 import no.ntnu.backend.model.User;
 import no.ntnu.repository.FavoriteFlightRepository;

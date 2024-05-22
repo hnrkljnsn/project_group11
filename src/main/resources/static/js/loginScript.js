@@ -1,69 +1,42 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log("Login script loaded");
 
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        console.log("Login form submitted");
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            console.log("Login form submitted");
 
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
 
-        fetch('/api/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ username, password })
-        })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok: ' + response.statusText);
-                }
-                return response.json();
-            })
-            .then(data => {
-                if (data.status === 'Login successful') {
-                    localStorage.setItem('token', data.token);
-                    window.location.href = `account.html?userId=${data.userId}`;
-                } else {
-                    alert('Login failed: ' + data.status);
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Login failed: ' + error.message);
-            });
-    });
-
-    const token = localStorage.getItem('token');
-    if (token) {
-        const userId = new URLSearchParams(window.location.search).get('userId');
-        if (userId) {
-            fetch(`/account.html?userId=${userId}`, {
-                method: 'GET',
+            fetch('/api/login', {
+                method: 'POST',
                 headers: {
-                    'Authorization': `Bearer ${token}`
-                }
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
             })
                 .then(response => {
-                    if (response.status === 403) {
-                        window.location.href = '403.html';
-                    } else if (!response.ok) {
+                    if (!response.ok) {
                         throw new Error('Network response was not ok: ' + response.statusText);
                     }
-                    return response.text();
+                    return response.json();
                 })
-                .then(html => {
-                    document.open();
-                    document.write(html);
-                    document.close();
+                .then(data => {
+                    if (data.status === 'Login successful') {
+                        localStorage.setItem('token', data.token);
+                        window.location.href = `favorites.html?userId=${data.userId}`;
+                    } else {
+                        alert('Login failed: ' + data.status);
+                    }
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                    alert('Error loading account page: ' + error.message);
+                    alert('Login failed: ' + error.message);
                 });
-        } else {
-            window.location.href = 'login.html';
-        }
+        });
+    } else {
+        console.error('Login form not found');
     }
 });

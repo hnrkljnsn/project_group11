@@ -1,26 +1,20 @@
 package no.ntnu.backend.controller;
 
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import no.ntnu.backend.model.Flight;
-import no.ntnu.backend.model.User;
 import no.ntnu.backend.model.FavoriteFlight;
+import no.ntnu.backend.model.User;
 import no.ntnu.backend.security.JwtUtil;
+import no.ntnu.backend.service.FavoriteFlightService;
 import no.ntnu.backend.service.UserService;
 import no.ntnu.repository.FavoriteFlightRepository;
 import no.ntnu.repository.FlightRepository;
 import no.ntnu.repository.UserRepository;
-import org.apache.coyote.Response;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 @RestController
 @AllArgsConstructor
@@ -32,7 +26,7 @@ public class UserController {
     private final JwtUtil jwtUtil;
     private final PasswordEncoder passwordEncoder;
     private final UserService userService;
-    private final FavoriteFlightRepository favoriteFlightRepository;
+    private final FavoriteFlightService favoriteFlightService; // Add this line
 
     @PostMapping("/create-account")
     public ResponseEntity<String> createAccount(@RequestBody User user) {
@@ -48,7 +42,7 @@ public class UserController {
     public ResponseEntity<Map<String, Object>> login(@RequestBody User loginDetails) {
         User userInDb = userRepository.findByUsername(loginDetails.getUsername());
         if (userInDb != null && passwordEncoder.matches(loginDetails.getPassword(), userInDb.getPassword())) {
-            String token = jwtUtil.generateToken(userInDb.getUsername(), userInDb.getRole()); // Pass both username and role
+            String token = jwtUtil.generateToken(userInDb.getUsername(), userInDb.getRole());
             Map<String, Object> response = new HashMap<>();
             response.put("status", "Login successful");
             response.put("token", token);
@@ -59,28 +53,15 @@ public class UserController {
         }
     }
 
-    @GetMapping("/account")
-    public User getLoggedInUserProfile(@AuthenticationPrincipal User user) {
-        return user;
-    }
-
-    @PostMapping("/{userId}/favorite-flights")
-    public ResponseEntity<String> addFavoriteFlight(@PathVariable int userId, @RequestBody Flight flight) {
-        Optional<User> userOp = userRepository.findById(userId);
-        if (userOp.isPresent()) {
-            User user = userOp.get();
-            flightRepository.save(flight);
-
-            FavoriteFlight favoriteFlight = new FavoriteFlight();
-            favoriteFlight.setUser(user);
-            favoriteFlight.setFlight(flight);
-
-            favoriteFlightRepository.save(favoriteFlight);
-
-            return ResponseEntity.ok("Flight added to favorites");
+    @GetMapping("/{userId}/favorite-flights")
+    public ResponseEntity<List<FavoriteFlight>> getFavoriteFlights(@PathVariable int userId) {
+        Optional<User> userOpt = userRepository.findById(userId);
+        if (userOpt.isPresent()) {
+            User user = userOpt.get();
+            List<FavoriteFlight> favoriteFlights = favoriteFlightService.getFavoriteFlights(user);
+            return ResponseEntity.ok(favoriteFlights);
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Collections.emptyList());
         }
     }
 }
-
