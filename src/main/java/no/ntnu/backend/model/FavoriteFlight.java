@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
-public class UserFlight {
+public class FavoriteFlight {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

@@ -1,13 +1,15 @@
-package no.ntnu.backend.dummy;
+package no.ntnu.backend.controller;
 
 import no.ntnu.backend.model.Flight;
 import no.ntnu.backend.model.User;
-import no.ntnu.backend.model.UserFlight;
+import no.ntnu.backend.model.FavoriteFlight;
 import no.ntnu.backend.security.JwtUtil;
+import no.ntnu.backend.service.UserService;
 import no.ntnu.repository.FlightRepository;
 import no.ntnu.repository.UserFlightRepository;
 import no.ntnu.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -25,18 +27,21 @@ public class UserController {
     private final UserFlightRepository userFlightRepository;
     private final JwtUtil jwtUtil;
     private final PasswordEncoder passwordEncoder;
+    private final UserService userService;
 
     @Autowired
     public UserController(UserRepository userRepository,
                           FlightRepository flightRepository,
                           UserFlightRepository userFlightRepository,
                           JwtUtil jwtUtil,
-                          PasswordEncoder passwordEncoder) {
+                          PasswordEncoder passwordEncoder,
+                          UserService userService) {
         this.userRepository = userRepository;
         this.flightRepository = flightRepository;
         this.userFlightRepository = userFlightRepository;
         this.jwtUtil = jwtUtil;
         this.passwordEncoder = passwordEncoder;
+        this.userService = userService;
     }
 
     @PostMapping("/create-account")
@@ -67,7 +72,7 @@ public class UserController {
     @GetMapping("/account/{id}")
     public ResponseEntity<?> getAccount(@PathVariable("id") Long id) {
         ResponseEntity response;
-        Optional<User> userOptional = this.userRepository.findById(id);
+        Optional<User> userOptional = this.userService.getUserById(id);
         if (userOptional.isPresent()) {
             User user = userOptional.get();
             return new ResponseEntity(user, HttpStatus.OK);
@@ -83,11 +88,11 @@ public class UserController {
         if (user != null) {
             flightRepository.save(flight);
 
-            UserFlight userFlight = new UserFlight();
-            userFlight.setUser(user);
-            userFlight.setFlight(flight);
+            FavoriteFlight favoriteFlight = new FavoriteFlight();
+            favoriteFlight.setUser(user);
+            favoriteFlight.setFlight(flight);
 
-            userFlightRepository.save(userFlight);
+            userFlightRepository.save(favoriteFlight);
 
             return ResponseEntity.ok("Flight added to favorites");
         } else {
@@ -99,9 +104,9 @@ public class UserController {
     public ResponseEntity<Set<Flight>> getFavoriteFlights(@PathVariable int userId) {
         User user = userRepository.findById((long) userId).orElse(null);
         if (user != null) {
-            Set<UserFlight> userFlights = user.getFavoriteFlights();
+            Set<FavoriteFlight> userFlights = user.getFavoriteFlights();
             Set<Flight> favoriteFlights = userFlights.stream()
-                    .map(UserFlight::getFlight)
+                    .map(FavoriteFlight::getFlight)
                     .collect(Collectors.toSet());
             return ResponseEntity.ok(favoriteFlights);
         } else {

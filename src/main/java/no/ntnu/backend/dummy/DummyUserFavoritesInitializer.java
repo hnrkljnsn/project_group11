@@ -2,7 +2,7 @@ package no.ntnu.backend.dummy;
 
 import no.ntnu.backend.model.Flight;
 import no.ntnu.backend.model.User;
-import no.ntnu.backend.model.UserFlight;
+import no.ntnu.backend.model.FavoriteFlight;
 import no.ntnu.repository.FlightRepository;
 import no.ntnu.repository.UserFlightRepository;
 import no.ntnu.repository.UserRepository;
@@ -54,9 +54,9 @@ public class DummyUserFavoritesInitializer implements ApplicationListener<Applic
     }
 
     private void createAndSaveUserFlight(User user, Flight flight) {
-        UserFlight userFlight = new UserFlight();
-        userFlight.setUser(user);
-        userFlight.setFlight(flight);
-        userFlightRepository.save(userFlight);
+        FavoriteFlight favoriteFlight = new FavoriteFlight();
+        favoriteFlight.setUser(user);
+        favoriteFlight.setFlight(flight);
+        userFlightRepository.save(favoriteFlight);
     }
 }

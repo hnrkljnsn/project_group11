@@ -15,7 +15,7 @@ public class User {
     private String role;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "user")
-    private Set<UserFlight> favoriteFlights = new HashSet<>();
+    private Set<FavoriteFlight> favoriteFlights = new HashSet<>();
 
     public int getUserId() {
         return userId;
@@ -49,11 +49,11 @@ public class User {
         this.password = password;
     }
 
-    public Set<UserFlight> getFavoriteFlights() {
+    public Set<FavoriteFlight> getFavoriteFlights() {
         return favoriteFlights;
     }
 
-    public void setFavoriteFlights(Set<UserFlight> favoriteFlights) {
+    public void setFavoriteFlights(Set<FavoriteFlight> favoriteFlights) {
         this.favoriteFlights = favoriteFlights;
     }
 }
