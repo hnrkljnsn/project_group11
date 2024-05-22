@@ -1,4 +1,5 @@
-![FlightFinder Logo](blob:https://www.bing.com/c5f2167c-47b9-4352-8da8-d4b7a01154da)
+
+![c5f2167c-47b9-4352-8da8-d4b7a01154da](https://github.com/hnrkljnsn/project_group11/assets/77272818/ff06995a-347f-4a05-96c9-48bd5d50bbec)
 
 
 # Flight Finder
@@ -64,7 +65,7 @@ Text
 | View all orders                |                      | ✔️      |
 | Mark/unmark orders as processed|                      | ✔️      |
 
-## Review
+
 | Functionality                  | Customer             | Admin   |
 |--------------------------------|----------------------|---------|
 | Post a product review          | ✔️                   |         |
