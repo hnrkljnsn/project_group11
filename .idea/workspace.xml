@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/controller/UserController.java" afterDir="false" />
@@ -12,6 +13,13 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/loginScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/loginScript.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/favorites.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/favorites.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/topnav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/topnav.html" afterDir="false" />
+=======
+    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Trying to make deletion of flights possible from the browser.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/FlightController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/UserFlightRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/UserFlightRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/flightDetailsScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/flightDetailsScript.js" afterDir="false" />
+>>>>>>> test
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +40,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+<<<<<<< HEAD
         <entry key="$PROJECT_DIR$" value="frontend" />
+=======
+        <entry key="$PROJECT_DIR$" value="backend" />
+>>>>>>> test
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,6 +63,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
@@ -76,8 +89,34 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;934567fe23c9b9d09b9a2b9a5fb0abd7&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "test",
+    "last_opened_file_path": "/Users/henrikloejensen/Documents/project_group11/src/main/java/no/ntnu/frontend",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "spring.configuration.checksum": "934567fe23c9b9d09b9a2b9a5fb0abd7",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> test
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\repos\project_group11\src\main\resources\static\stylesheets" />
@@ -212,7 +251,25 @@
       <option name="presentableId" value="LOCAL−00011" />
       <updated>1716219897692</updated>
     </task>
+<<<<<<< HEAD
     <option name="localTasksCounter" value="12" />
+=======
+    <task id="LOCAL−00012" summary="A user can now have multiple favorite flights. They show up in  favorites.html when you log in.">
+      <option name="closed" value="true" />
+      <created>1716308683218</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1716308683218</updated>
+    </task>
+    <task id="LOCAL−00013" summary="Trying to make deletion of flights possible from the browser.">
+      <option name="closed" value="true" />
+      <created>1716384511327</created>
+      <option name="number" value="LOCAL−00013" />
+      <option name="presentableId" value="LOCAL−00013" />
+      <updated>1716384511327</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+>>>>>>> test
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +340,13 @@
     <MESSAGE value="Now a database for emails is created and the inputted text is sent from the webapp to sql database. Trying to figure out how to not be able to send any text besides email-addresses." />
     <MESSAGE value="Now only able to send email-addresses in the subscription field." />
     <MESSAGE value="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)" />
+<<<<<<< HEAD
     <option name="LAST_COMMIT_MESSAGE" value="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)" />
+=======
+    <MESSAGE value="A user can now have multiple favorite flights. They show up in  favorites.html when you log in." />
+    <MESSAGE value="Trying to make deletion of flights possible from the browser." />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to make deletion of flights possible from the browser." />
+>>>>>>> test
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
