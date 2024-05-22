@@ -57,7 +57,7 @@ public class DummyUserFavoritesInitializer implements ApplicationListener<Applic
     }
 
     private boolean userFlightsAlreadyExist() {
-        return userFlightRepository.count() > 0;
+        return favoriteFlightRepository.count() > 0;
     }
 
     private void createAndSaveUserFlight(User user, Flight flight) {
