@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Started creating logic for removing and adding flights from favorites.">
+    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Trying to make deletion of flights possible from the browser.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/FlightController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/UserFlightRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/UserFlightRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/flightDetailsScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/flightDetailsScript.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,7 +213,14 @@
       <option name="presentableId" value="LOCAL−00012" />
       <updated>1716308683218</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL−00013" summary="Trying to make deletion of flights possible from the browser.">
+      <option name="closed" value="true" />
+      <created>1716384511327</created>
+      <option name="number" value="LOCAL−00013" />
+      <option name="presentableId" value="LOCAL−00013" />
+      <updated>1716384511327</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +292,8 @@
     <MESSAGE value="Now only able to send email-addresses in the subscription field." />
     <MESSAGE value="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)" />
     <MESSAGE value="A user can now have multiple favorite flights. They show up in  favorites.html when you log in." />
-    <option name="LAST_COMMIT_MESSAGE" value="A user can now have multiple favorite flights. They show up in  favorites.html when you log in." />
+    <MESSAGE value="Trying to make deletion of flights possible from the browser." />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to make deletion of flights possible from the browser." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

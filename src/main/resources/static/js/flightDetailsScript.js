@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const flightDetails = document.getElementById('flightDetails');
     let imageSrc = 'https://t4.ftcdn.net/jpg/04/38/64/95/360_F_438649569_DsSHTkasH6GqqQXwu7FbRG0OMHstAc2D.jpg';
     const flightInfo = `
-        <div class ="flight-card">
+        <div class="flight-card">
             <div class="flight-image"><img src="${imageSrc}" alt="Flight Image" /></div>
             <div class="flight-info" data-header="Airline">${airline}</div>
             <div class="flight-info" data-header="Departure">${departureCity}</div>
@@ -49,6 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (response.ok) {
                         alert('Flight deleted successfully.');
                         window.location.href = 'search.html';
+                    } else if (response.status === 404) {
+                        alert('Flight not found.');
                     } else {
                         alert('Failed to delete flight.');
                     }
