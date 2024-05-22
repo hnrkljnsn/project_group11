@@ -7,13 +7,11 @@
   <title>FlightFinder</title>
   <link rel="stylesheet" type="text/css" href="/stylesheets/ProjectStylesheet.css">
   <link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
-
 </head>
-  <body>
-    <div class="page-container">
-      <div class="content-wrap">
-        <div th:replace="~{fragments/topnav.html :: navbar}">
-        </div>
+<body>
+<div class="page-container">
+  <div class="content-wrap">
+    <div th:replace="~{fragments/topnav.html :: navbar}"></div>
 
     <!-- Login Page -->
     <div class="login-container">
@@ -27,14 +25,10 @@
       <div class="login-links">
         <button class="login-button-create" onclick="window.location.href='createaccount.html'">Create Account</button>
       </div>
-      </div>
-
-
-
-        <canvas id="myCanvas"></canvas>
-      </div>
-      <div th:replace="~{fragments/footer.html :: footer}">
-      </div>
     </div>
-  </body>
+    <canvas id="myCanvas"></canvas>
+  </div>
+  <div th:replace="~{fragments/footer.html :: footer}"></div>
+</div>
+</body>
 </html>

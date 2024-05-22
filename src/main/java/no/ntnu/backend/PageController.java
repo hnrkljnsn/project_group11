@@ -37,5 +37,8 @@ public class PageController {
     @GetMapping("/favorites.html")
     public String getFavorites(){return "favorites";}
 
+    @GetMapping("/account.html")
+    public String getAccount(){return "account";}
+
 
 }
