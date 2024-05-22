@@ -40,19 +40,17 @@ function handleError(error) {
 function createFlightInfoString(flight) {
     let imageSrc = 'https://t4.ftcdn.net/jpg/04/38/64/95/360_F_438649569_DsSHTkasH6GqqQXwu7FbRG0OMHstAc2D.jpg';
     return `
-      <a href="flightdetails.html?flightId=${flight.flightId}&airline=${encodeURIComponent(flight.airline)}&departureCity=${encodeURIComponent(flight.departureCity)}&returnCity=${encodeURIComponent(flight.returnCity)}&departureDate=${flight.departureDate}&returnDate=${flight.returnDate}&price=${flight.price}" class="search-link">
-        <div class="flight-card">
-          <div class="flight-image">
-            <img src="${imageSrc}" alt="Flight Image" />
-          </div>
-          <div class="flight-info" data-header="Departure City">${flight.departureCity}</div>
-          <div class="flight-info" data-header="Return City">${flight.returnCity}</div>
-          <div class="flight-info" data-header="Departure Date">${flight.departureDate}</div>
-          <div class="flight-info" data-header="Return Date">${flight.returnDate}</div>
-          <div class="flight-info" data-header="Round-trip">${flight.roundTrip}</div>
-          <div class="flight-info" data-header="Price">${flight.price}</div>
-          <div class="flight-info title" data-header="Airline">${flight.airline}</div>
+      <li class="flight-card">
+        <div class="flight-image">
+          <img src="${imageSrc}" alt="Flight Image" />
         </div>
-      </a>
+        <div class="flight-info" data-header="Departure City">${flight.departureCity}</div>
+        <div class="flight-info" data-header="Return City">${flight.returnCity}</div>
+        <div class="flight-info" data-header="Departure Date">${flight.departureDate}</div>
+        <div class="flight-info" data-header="Return Date">${flight.returnDate}</div>
+        <div class="flight-info" data-header="Round-trip">${flight.roundTrip}</div>
+        <div class="flight-info" data-header="Price">${flight.price}</div>
+        <div class="flight-info" data-header="Airline">${flight.airline}</div>
+      </li>
     `;
 }
