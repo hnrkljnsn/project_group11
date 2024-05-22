@@ -1,5 +1,7 @@
-package no.ntnu.backend;
+package no.ntnu.backend.dummy;
 
+import no.ntnu.backend.model.Flight;
+import no.ntnu.repository.FlightRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

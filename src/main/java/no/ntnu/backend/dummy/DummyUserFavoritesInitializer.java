@@ -1,5 +1,11 @@
-package no.ntnu.backend;
+package no.ntnu.backend.dummy;
 
+import no.ntnu.backend.model.Flight;
+import no.ntnu.backend.model.User;
+import no.ntnu.backend.model.UserFlight;
+import no.ntnu.repository.FlightRepository;
+import no.ntnu.repository.UserFlightRepository;
+import no.ntnu.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,8 +13,6 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 @Component

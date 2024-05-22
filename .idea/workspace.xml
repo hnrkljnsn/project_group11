@@ -5,22 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/error/CustomErrorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/security/CustomUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/security/JwtRequestFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/security/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error/403.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/DummyUserDataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/DummyUserDataInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/PageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/DummyFlightDataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/dummy/DummyFlightDataInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/DummyUserDataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/dummy/DummyUserDataInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/DummyUserFavoritesInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/dummy/DummyUserFavoritesInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/model/Flight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/controller/FlightController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/FlightRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/repository/FlightRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/controller/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/Subscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/model/Subscription.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/SubscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/controller/SubscriptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/SubscriptionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/repository/SubscriptionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/dummy/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/UserFlight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/model/UserFlight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/UserFlightRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/repository/UserFlightRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/security/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/security/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/security/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/security/JwtRequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/security/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/security/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/loginScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/loginScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/topnav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/topnav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/account.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,5 +1,7 @@
-package no.ntnu.backend;
+package no.ntnu.backend.dummy;
 
+import no.ntnu.backend.model.User;
+import no.ntnu.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

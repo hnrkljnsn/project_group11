@@ -1,4 +1,3 @@
-// In loginScript.js
 document.addEventListener('DOMContentLoaded', function() {
     console.log("Login script loaded");
 

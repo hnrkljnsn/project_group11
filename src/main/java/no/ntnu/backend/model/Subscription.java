@@ -1,4 +1,4 @@
-package no.ntnu.backend;
+package no.ntnu.backend.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

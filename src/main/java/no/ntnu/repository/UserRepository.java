@@ -1,5 +1,6 @@
-package no.ntnu.backend;
+package no.ntnu.repository;
 
+import no.ntnu.backend.model.User;
 import org.springframework.data.repository.CrudRepository;
 
 

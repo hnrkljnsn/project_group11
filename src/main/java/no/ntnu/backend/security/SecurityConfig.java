@@ -29,17 +29,17 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf -> csrf.disable())
+                .addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class)
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/admin/**").hasAuthority("ROLE_ADMIN")
-                        .requestMatchers("/account.html").hasAuthority("ROLE_USER")
+                        .requestMatchers("/login/**").hasAuthority("ROLE_USER")
+                        .requestMatchers("/account/**").hasAuthority("ROLE_USER")
                         .anyRequest().permitAll()
                 )
-                .exceptionHandling(ex -> ex.accessDeniedPage("/error/403"))
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 );
 
-        http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
 
@@ -48,3 +48,4 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 }
+

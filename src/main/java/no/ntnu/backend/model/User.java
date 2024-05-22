@@ -1,6 +1,7 @@
-package no.ntnu.backend;
+package no.ntnu.backend.model;
 
 import jakarta.persistence.*;
+
 import java.util.HashSet;
 import java.util.Set;
 

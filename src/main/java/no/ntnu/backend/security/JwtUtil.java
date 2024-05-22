@@ -39,8 +39,9 @@ public class JwtUtil {
         return extractExpiration(token).before(new Date());
     }
 
-    public String generateToken(String username) {
+    public String generateToken(String username, String role) { // Ensure this method accepts both username and role
         Map<String, Object> claims = new HashMap<>();
+        claims.put("role", role); // Include the role in the claims
         return createToken(claims, username);
     }
 
@@ -59,3 +60,4 @@ public class JwtUtil {
         return (extractedUsername.equals(username) && !isTokenExpired(token));
     }
 }
+

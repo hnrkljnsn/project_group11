@@ -1,16 +1,19 @@
-package no.ntnu.backend;
+package no.ntnu.backend.dummy;
 
+import no.ntnu.backend.model.Flight;
+import no.ntnu.backend.model.User;
+import no.ntnu.backend.model.UserFlight;
 import no.ntnu.backend.security.JwtUtil;
+import no.ntnu.repository.FlightRepository;
+import no.ntnu.repository.UserFlightRepository;
+import no.ntnu.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @RestController
@@ -50,7 +53,7 @@ public class UserController {
     public ResponseEntity<Map<String, Object>> login(@RequestBody User loginDetails) {
         User userInDb = userRepository.findByUsername(loginDetails.getUsername());
         if (userInDb != null && passwordEncoder.matches(loginDetails.getPassword(), userInDb.getPassword())) {
-            String token = jwtUtil.generateToken(userInDb.getUsername());
+            String token = jwtUtil.generateToken(userInDb.getUsername(), userInDb.getRole()); // Pass both username and role
             Map<String, Object> response = new HashMap<>();
             response.put("status", "Login successful");
             response.put("token", token);
@@ -59,6 +62,19 @@ public class UserController {
         } else {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Collections.singletonMap("status", "Invalid username or password"));
         }
+    }
+
+    @GetMapping("/account/{id}")
+    public ResponseEntity<?> getAccount(@PathVariable("id") Long id) {
+        ResponseEntity response;
+        Optional<User> userOptional = this.userRepository.findById(id);
+        if (userOptional.isPresent()) {
+            User user = userOptional.get();
+            return new ResponseEntity(user, HttpStatus.OK);
+        } else {
+            response = new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return response;
     }
 
     @PostMapping("/{userId}/favorite-flights")
@@ -93,3 +109,4 @@ public class UserController {
         }
     }
 }
+

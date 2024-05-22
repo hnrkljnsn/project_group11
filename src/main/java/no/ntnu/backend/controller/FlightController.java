@@ -1,5 +1,7 @@
-package no.ntnu.backend;
+package no.ntnu.backend.controller;
 
+import no.ntnu.backend.model.Flight;
+import no.ntnu.repository.FlightRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
