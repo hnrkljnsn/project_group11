@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>About Us</title>
-    <link rel="stylesheet" type="text/css" href="/static/stylesheets/ProjectStylesheet.css">
-    <link rel="stylesheet" type="text/css" href="../static/stylesheets/about.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/ProjectStylesheet.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
@@ -14,10 +14,6 @@
         <div class="content-wrap">
             <div th:replace="~{fragments/topnav.html :: navbar}">
             </div>
-            <div class="header">
-                <h1>About Us</h1>
-            </div>
-
 
             <div class="container">
                 <div class="main">
@@ -66,15 +62,7 @@
                 </div>
             </div>
 
-            <div class="footer">
-                <p>This website is a result of a university group project, performed in the course IDATA2301
-                    Web technologies, at NTNU. All the information provided here is a result of imagination.
-                    Any resemblance with real companies or products is a coincidence. </p>
-                <div style="display: flex; justify-content: center;">
-                    <p>Copyright © 2024 FlightFinder</p>
-                </div>
-                <canvas id="myCanvas"></canvas>
-            </div>
+            <canvas id="myCanvas"></canvas>
             <div th:replace="~{fragments/footer.html :: footer}">
             </div>
         </div>
