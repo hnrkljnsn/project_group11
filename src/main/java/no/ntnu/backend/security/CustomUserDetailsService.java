@@ -19,8 +19,6 @@ import org.slf4j.LoggerFactory;
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 
-    private static final Logger log = LoggerFactory.getLogger(CustomUserDetailsService.class);
-
     @Autowired
     private UserRepository userRepository;
 
@@ -28,12 +26,10 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findByUsername(username);
         if (user == null) {
-            log.warn("User not found: {}", username);
-            throw new UsernameNotFoundException("User not found");
+            throw new UsernameNotFoundException("User not found: " + username);
         }
-        List<GrantedAuthority> authorities = Collections.singletonList(new SimpleGrantedAuthority("ROLE_" + user.getRole()));
-        log.info("User found: {}", username);
-        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), authorities);
+        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(),
+                Collections.singletonList(new SimpleGrantedAuthority("ROLE_" + user.getRole())));
     }
 }
 
