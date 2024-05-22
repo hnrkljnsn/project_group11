@@ -1,70 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <script src="/js/createAccount.js"></script>
-  <script src="/js/homeSearchScript.js"></script>
   <meta charset="UTF-8">
-  <title>FlightFinder</title>
+  <title>Flight Details</title>
   <link rel="stylesheet" type="text/css" href="/stylesheets/ProjectStylesheet.css">
   <link rel="stylesheet" type="text/css" href="/stylesheets/flights.css">
-
+  <script src="/js/flightDetailsScript.js"></script>
 </head>
+<body>
+<div class="page-container">
+  <div class="content-wrap">
+    <div th:replace="~{fragments/topnav.html :: navbar}"></div>
 
-  <div class="page-container">
-    <div class="content-wrap">
-      <div th:replace="~{fragments/topnav.html :: navbar}">
-      </div>
-
-    <!-- Flight container-->
-
-    <div class="flight-container">
-      <div th:each="flight : ${flights}" class="flight-item">
-        <div class="flight-image">
-          <img th:src="${flight.image}" alt="Destination" />
-        </div>
-        <div class="flight-details">
-          <div>
-            <span class="label">Flight Name:</span>
-            <span th:text="${flight.flightName}"></span>
-          </div>
-          <div>
-            <span class="label">From:</span>
-            <span th:text="${flight.from}"></span>
-          </div>
-          <div>
-            <span class="label">To:</span>
-            <span th:text="${flight.to}"></span>
-          </div>
-          <div>
-            <span class="label">Travel Dates:</span>
-            <span th:text="${flight.travelDates}"></span>
-          </div>
-          <div>
-            <span class="label">Class:</span>
-            <span th:text="${flight.class}"></span>
-          </div>
-          <div>
-            <span class="label">Extra Features:</span>
-            <span th:text="${flight.extraFeatures}"></span>
-          </div>
-          <div>
-            <span class="label">Price:</span>
-            <span th:text="${flight.price}"></span>
-          </div>
-        </div>
-        <div class="order-button">
-          <i class="fas fa-heart favorite-icon"></i>
-          <button>ORDER</button>
-        </div>
-      </div>
-    </div>
-
-
-      <canvas id="myCanvas"></canvas>
-    </div>
-    <div th:replace="~{fragments/footer.html :: footer}">
+    <div class="flight-details-container">
+      <h3 >Flight Details</h3>
+      <div id="flightDetails"></div>
     </div>
   </div>
-  </body>
+  <div th:replace="~{fragments/footer.html :: footer}"></div>
+</div>
+</body>
 </html>
