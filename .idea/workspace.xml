@@ -64,9 +64,164 @@
       <updated>1716411503866</updated>
       <workItem from="1716411506673" duration="942000" />
     </task>
+    <task id="LOCAL−00001" summary="Created the necessary files to start coding frontende + separate directories for backend and frontend">
+      <option name="closed" value="true" />
+      <created>1709799101541</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1709799101541</updated>
+    </task>
+    <task id="LOCAL−00002" summary="Finally able to make the project into a spring project. Will use the web resource spring initializer next time...">
+      <option name="closed" value="true" />
+      <created>1710771243348</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1710771243348</updated>
+    </task>
+    <task id="LOCAL−00003" summary="Got a springboot warning when navigating the menu of the website. Turns out the &lt;nav th:insert needs to be wrapped as such:  &quot;~{...}&quot;">
+      <option name="closed" value="true" />
+      <created>1710839768576</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1710839768576</updated>
+    </task>
+    <task id="LOCAL−00004" summary="Started making script for creating an account.">
+      <option name="closed" value="true" />
+      <created>1716204766638</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1716204766638</updated>
+    </task>
+    <task id="LOCAL−00005" summary="Made UserController class and some changes in UserRepository">
+      <option name="closed" value="true" />
+      <created>1716206297456</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1716206297456</updated>
+    </task>
+    <task id="LOCAL−00006" summary="User can now be created from the createaccount.html and is added to the database.">
+      <option name="closed" value="true" />
+      <created>1716208368311</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1716208368311</updated>
+    </task>
+    <task id="LOCAL−00007" summary="After creating user you are now sent to the home page(home.html).">
+      <option name="closed" value="true" />
+      <created>1716208531284</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1716208531284</updated>
+    </task>
+    <task id="LOCAL−00008" summary="Started creating backend for the subscription for newsletter.">
+      <option name="closed" value="true" />
+      <created>1716217412056</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1716217412056</updated>
+    </task>
+    <task id="LOCAL−00009" summary="Now a database for emails is created and the inputted text is sent from the webapp to sql database. Trying to figure out how to not be able to send any text besides email-addresses.">
+      <option name="closed" value="true" />
+      <created>1716218438263</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1716218438263</updated>
+    </task>
+    <task id="LOCAL−00010" summary="Now only able to send email-addresses in the subscription field.">
+      <option name="closed" value="true" />
+      <created>1716219297437</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1716219297437</updated>
+    </task>
+    <task id="LOCAL−00011" summary="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)">
+      <option name="closed" value="true" />
+      <created>1716219897692</created>
+      <option name="number" value="LOCAL−00011" />
+      <option name="presentableId" value="LOCAL−00011" />
+      <updated>1716219897692</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="pahmel0" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="mkbrun" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="man" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/backend" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created the necessary files to start coding frontende + separate directories for backend and frontend" />
+    <MESSAGE value="Finally able to make the project into a spring project. Will use the web resource spring initializer next time..." />
+    <MESSAGE value="Got a springboot warning when navigating the menu of the website. Turns out the &lt;nav th:insert needs to be wrapped as such:  &quot;~{...}&quot;" />
+    <MESSAGE value="Started making script for creating an account." />
+    <MESSAGE value="Made UserController class and some changes in UserRepository" />
+    <MESSAGE value="User can now be created from the createaccount.html and is added to the database." />
+    <MESSAGE value="After creating user you are now sent to the home page(home.html)." />
+    <MESSAGE value="Started creating backend for the subscription for newsletter." />
+    <MESSAGE value="Now a database for emails is created and the inputted text is sent from the webapp to sql database. Trying to figure out how to not be able to send any text besides email-addresses." />
+    <MESSAGE value="Now only able to send email-addresses in the subscription field." />
+    <MESSAGE value="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ClassNotFoundException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
