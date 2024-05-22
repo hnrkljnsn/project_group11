@@ -5,49 +5,41 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
-
-import java.time.LocalDate;
 
 @Component
 public class DummyUserDataInitializer implements ApplicationListener<ApplicationReadyEvent> {
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
     private final Logger logger = LoggerFactory.getLogger("DummyUserInitializer");
 
-    /**
-     * This method is called when the application is ready (loaded).
-     *
-     * @param event Event which we don't use :)
-     */
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    @Autowired
+    public DummyUserDataInitializer(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
     @Override
     public void onApplicationEvent(ApplicationReadyEvent event) {
         logger.info("Importing user test data...");
-        if(userRepository.count()==0) {
-            User user1 = new User();
-            user1.setUserId(1);
-            user1.setUsername("1");
-            user1.setPassword("1");
-
-            User user2 = new User();
-            user2.setUserId(2);
-            user2.setUsername("2");
-            user2.setPassword("2");
-
-            User user3 = new User();
-            user3.setUserId(3);
-            user3.setUsername("3");
-            user3.setPassword("3");
-
-            userRepository.save(user1);
-            userRepository.save(user2);
-            userRepository.save(user3);
+        if (userRepository.count() == 0) {
+            createUser("1", "1", "USER");
+            createUser("2", "2", "USER");
+            createUser("3", "3", "ADMIN");
 
             logger.info("DONE importing user test data");
-        }
-        else
-        {
+        } else {
             logger.info("All user test data already imported...");
         }
+    }
+
+    private void createUser(String username, String password, String role) {
+        User user = new User();
+        user.setUsername(username);
+        user.setPassword(passwordEncoder.encode(password));
+        user.setRole(role);
+        userRepository.save(user);
     }
 }
