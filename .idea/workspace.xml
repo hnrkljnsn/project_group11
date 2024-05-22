@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)">
       <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/config/WebConfig.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/error/CustomErrorController.java" afterDir="false" />
@@ -21,6 +22,10 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/loginScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/loginScript.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/topnav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/topnav.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+=======
+    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Started creating logic for removing and adding flights from favorites.">
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/DummyUserFavoritesInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/DummyUserFavoritesInitializer.java" afterDir="false" />
+>>>>>>> 93b3d37eee924ac2d6c3f7fe7c4895c268de87b6
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,17 +36,24 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+<<<<<<< HEAD
         <option value="JavaScript File" />
         <option value="Interface" />
         <option value="Class" />
         <option value="HTML File" />
+=======
+        <option value="HTML File" />
+        <option value="Class" />
+        <option value="Interface" />
+        <option value="JavaScript File" />
+>>>>>>> 93b3d37eee924ac2d6c3f7fe7c4895c268de87b6
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="frontend" />
+        <entry key="$PROJECT_DIR$" value="development" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -139,8 +151,12 @@
       <workItem from="1714236630980" duration="8998000" />
       <workItem from="1714386028523" duration="8039000" />
       <workItem from="1715783320733" duration="617000" />
+<<<<<<< HEAD
       <workItem from="1716331222764" duration="7724000" />
       <workItem from="1716339006913" duration="1351000" />
+=======
+      <workItem from="1716319195457" duration="4861000" />
+>>>>>>> 93b3d37eee924ac2d6c3f7fe7c4895c268de87b6
     </task>
     <task id="LOCAL−00001" summary="Created the necessary files to start coding frontende + separate directories for backend and frontend">
       <option name="closed" value="true" />
@@ -219,7 +235,14 @@
       <option name="presentableId" value="LOCAL−00011" />
       <updated>1716219897692</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL−00012" summary="A user can now have multiple favorite flights. They show up in  favorites.html when you log in.">
+      <option name="closed" value="true" />
+      <created>1716308683218</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1716308683218</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +313,8 @@
     <MESSAGE value="Now a database for emails is created and the inputted text is sent from the webapp to sql database. Trying to figure out how to not be able to send any text besides email-addresses." />
     <MESSAGE value="Now only able to send email-addresses in the subscription field." />
     <MESSAGE value="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)" />
+    <MESSAGE value="A user can now have multiple favorite flights. They show up in  favorites.html when you log in." />
+    <option name="LAST_COMMIT_MESSAGE" value="A user can now have multiple favorite flights. They show up in  favorites.html when you log in." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
