@@ -11,5 +11,6 @@ import java.util.List;
 public interface FavoriteFlightRepository extends ListCrudRepository<FavoriteFlight, Integer> {
 
     List<FavoriteFlight> findByUser(User user);
+    void deleteByFlight_flightId(Integer flightId);
 
 }
