@@ -5,14 +5,48 @@
       <a href="home.html">Flight<br>Finder</a>
     </div>
     <div class="middle-items">
-      <a class="active" href="home.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="search.html">Search</a>
+      <a class="active nav-link" href="home.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="search.html">Search</a>
     </div>
     <div class="right-items">
+      <a href="#" id="logoutButton">Logout</a>
       <a href="#" id="userIcon"><i class="fas fa-user"></i></a>
     </div>
   </div>
-    <script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const userIcon = document.getElementById('userIcon');
+      const logoutButton = document.getElementById('logoutButton');
+      const token = localStorage.getItem('token');
+      const userId = new URLSearchParams(window.location.search).get('userId');
+
+      if (userIcon) {
+        userIcon.addEventListener('click', function() {
+          if (token) {
+            window.location.href = `favorites.html?userId=${userId}`;
+          } else {
+            window.location.href = 'login.html';
+          }
+        });
+      }
+
+      if (logoutButton) {
+        logoutButton.addEventListener('click', function() {
+          localStorage.removeItem('token');
+          window.location.href = 'login.html';
+        });
+      }
+
+      // Append userId to all internal navigation links
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        const url = new URL(link.href, window.location.origin); // Ensure full URL
+        if (userId) {
+          url.searchParams.set('userId', userId);
+        }
+        link.href = url.toString();
+      });
+    });
   </script>
 </div>
