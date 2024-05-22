@@ -1,20 +1,53 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const userId = urlParams.get('userId');
-    console.log("User ID:", userId);
+    const token = localStorage.getItem('token');
+    if (!token) {
+        console.error('Token not found, redirecting to login.');
+        window.location.href = 'login.html';
+        return;
+    }
+    console.log('Token found:', token);
 
-    const apiUrl = `/api/${userId}/favorite-flights`;
-    console.log("API URL:", apiUrl);
+    const userId = new URLSearchParams(window.location.search).get('userId');
+    if (!userId) {
+        console.error('User ID not found in URL, redirecting to login.');
+        window.location.href = 'login.html';
+        return;
+    }
+    console.log('User ID found:', userId);
 
-    fetch(apiUrl)
-        .then(response => response.json())
+    fetch(`/api/${userId}/favorite-flights`, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${token}`
+        }
+    })
+        .then(response => {
+            if (response.status === 403) {
+                window.location.href = '403.html';
+            } else if (!response.ok) {
+                throw new Error('Network response was not ok: ' + response.statusText);
+            }
+            return response.json();
+        })
         .then(flights => {
-            const flightList = document.getElementById('favoriteFlightsList');
-            flights.forEach(flight => {
+            if (!Array.isArray(flights)) {
+                throw new Error('Invalid response format');
+            }
+            const favoritesList = document.getElementById('favoritesList');
+            if (!favoritesList) {
+                console.error('Favorites list element not found');
+                return;
+            }
+            console.log('Favorites list element found:', favoritesList);
+
+            flights.forEach(favoriteFlight => {
                 const listItem = document.createElement('li');
-                listItem.textContent = `Airline: ${flight.airline}, Departure: ${flight.departureCity}, Destination: ${flight.returnCity}, Departure Date: ${flight.departureDate}, Return Date: ${flight.returnDate}, Price: ${flight.price}`;
-                flightList.appendChild(listItem);
+                listItem.textContent = `Flight from ${favoriteFlight.flight.departureCity} to ${favoriteFlight.flight.returnCity} with ${favoriteFlight.flight.airline}`;
+                favoritesList.appendChild(listItem);
             });
         })
-        .catch(error => console.error('Error:', error));
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error loading favorite flights: ' + error.message);
+        });
 });

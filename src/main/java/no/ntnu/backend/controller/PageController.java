@@ -1,4 +1,4 @@
-package no.ntnu.backend;
+package no.ntnu.backend.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

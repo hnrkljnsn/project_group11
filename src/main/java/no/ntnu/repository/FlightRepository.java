@@ -1,4 +1,5 @@
-package no.ntnu.backend;
+package no.ntnu.repository;
+import no.ntnu.backend.model.Flight;
 import org.springframework.data.repository.CrudRepository;
 
 import java.time.LocalDate;
