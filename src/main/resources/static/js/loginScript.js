@@ -1,3 +1,4 @@
+// In loginScript.js
 document.addEventListener('DOMContentLoaded', function() {
     console.log("Login script loaded");
 
@@ -15,14 +16,55 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             body: JSON.stringify({ username, password })
         })
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok: ' + response.statusText);
+                }
+                return response.json();
+            })
             .then(data => {
                 if (data.status === 'Login successful') {
-                    window.location.href = `favorites.html?userId=${data.userId}`;
+                    localStorage.setItem('token', data.token);
+                    window.location.href = `account.html?userId=${data.userId}`;
                 } else {
-                    alert('Login failed');
+                    alert('Login failed: ' + data.status);
                 }
             })
-            .catch(error => console.error('Error:', error));
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Login failed: ' + error.message);
+            });
     });
+
+    const token = localStorage.getItem('token');
+    if (token) {
+        const userId = new URLSearchParams(window.location.search).get('userId');
+        if (userId) {
+            fetch(`/account.html?userId=${userId}`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            })
+                .then(response => {
+                    if (response.status === 403) {
+                        window.location.href = '403.html';
+                    } else if (!response.ok) {
+                        throw new Error('Network response was not ok: ' + response.statusText);
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    document.open();
+                    document.write(html);
+                    document.close();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error loading account page: ' + error.message);
+                });
+        } else {
+            window.location.href = 'login.html';
+        }
+    }
 });
