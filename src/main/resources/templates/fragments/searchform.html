@@ -1,16 +1,24 @@
 <div th:fragment="searchForm">
     <form id="searchForm">
-        <label for="departureCity">Departure City</label>
-        <input type="text" id="departureCity" name="departureCity" placeholder="Departure City" required>
+        <div>
+            <label for="departureCity">Departure City:</label>
+            <input type="text" id="departureCity" name="departureCity" placeholder="Departure City" required>
+        </div>
 
-        <label for="returnCity">Return City</label>
-        <input type="text" id="returnCity" name="returnCity" placeholder="Return City" required>
+        <div>
+            <label for="returnCity">Return City:</label>
+            <input type="text" id="returnCity" name="returnCity" placeholder="Return City" required>
+        </div>
 
-        <label for="departureDate">Departure Date</label>
-        <input type="date" id="departureDate" name="departureDate" placeholder="Departure Date" required>
+        <div>
+            <label for="departureDate">Departure Date:</label>
+            <input type="date" id="departureDate" name="departureDate" placeholder="Departure Date" required>
+        </div>
 
-        <label for="returnDate">Return Date</label>
-        <input type="date" id="returnDate" name="returnDate" placeholder="Return Date">
+        <div>
+            <label for="returnDate">Return Date:</label>
+            <input type="date" id="returnDate" name="returnDate" placeholder="Return Date">
+        </div>
 
         <button type="submit">Search</button>
     </form>
