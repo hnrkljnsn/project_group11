@@ -34,9 +34,11 @@ public class UserController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Username already exists");
         }
         user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setRole("USER"); // Assign the role USER to new accounts
         userRepository.save(user);
         return ResponseEntity.ok("Account created successfully");
     }
+
 
     @PostMapping("/login")
     public ResponseEntity<Map<String, Object>> login(@RequestBody User loginDetails) {

@@ -4,163 +4,63 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_05_2024_18_46_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_05_2024_18_46__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_05_2024_00_01_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_05_2024_00_01__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_05_2024_01_57_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_05_2024_01_57__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="fca5b1d5-3a2f-449a-a9a6-e45c8e4b3dd8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/stylesheets/ProjectStylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/stylesheets/ProjectStylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/createAccount.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/createAccount.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/topnav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/topnav.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-        <option value="JavaScript File" />
-        <option value="Interface" />
-        <option value="Class" />
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="frontend" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "pahmel0"
-  }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/hnrkljnsn/project_group11.git",
-    "accountId": "0b1c2618-95fe-4c8b-886b-9396984b72b0"
-  }
-}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
-}</component>
-  <component name="ProjectId" id="2b7xwBLd2bcBMMzGRF3CziS7wTu" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2gq3tvUv7QS9eWRsnHrqZWIRuxr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.home.html.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.Application.executor": "Run",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "development",
-    "last_opened_file_path": "/Users/henrikloejensen/Documents/project_group11/src/main/java/no/ntnu/frontend",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "spring.configuration.checksum": "934567fe23c9b9d09b9a2b9a5fb0abd7",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\repos\project_group11\src\main\resources\static\stylesheets" />
-      <recent name="C:\repos\project_group11\src\main\resources" />
-      <recent name="C:\repos\project_group11\src\main\resources\static\js" />
-      <recent name="C:\repos\project_group11\src\main\resources\static" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
-    </key>
-  </component>
-  <component name="RunManager" selected="JavaScript Debug.about.html">
-    <configuration name="about.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/project_group11/src/main/resources/templates/about.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="home2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/project_group11/src/main/resources/templates/home2.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="home.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/project_group11/src/main/resources/templates/home.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RunManager">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="project_group11" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="no.ntnu.Application" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="no.ntnu.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JavaScript Debug.about.html" />
-        <item itemvalue="Spring Boot.Application" />
-        <item itemvalue="JavaScript Debug.home.html" />
-        <item itemvalue="JavaScript Debug.home2.html" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="" />
-      <created>1705580155022</created>
+      <changelist id="fca5b1d5-3a2f-449a-a9a6-e45c8e4b3dd8" name="Changes" comment="" />
+      <created>1716411503866</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1705580155022</updated>
-      <workItem from="1705580156045" duration="220000" />
-      <workItem from="1709798748706" duration="3632000" />
-      <workItem from="1712822037505" duration="5956000" />
-      <workItem from="1713456526395" duration="10230000" />
-      <workItem from="1713523571882" duration="3164000" />
-      <workItem from="1713875447652" duration="13143000" />
-      <workItem from="1714035111048" duration="380000" />
-      <workItem from="1714039674784" duration="1868000" />
-      <workItem from="1714133954118" duration="24193000" />
-      <workItem from="1714236630980" duration="8998000" />
-      <workItem from="1714386028523" duration="8039000" />
-      <workItem from="1715783320733" duration="617000" />
-      <workItem from="1716331222764" duration="7724000" />
-      <workItem from="1716339006913" duration="1351000" />
+      <updated>1716411503866</updated>
+      <workItem from="1716411506673" duration="942000" />
     </task>
     <task id="LOCAL−00001" summary="Created the necessary files to start coding frontende + separate directories for backend and frontend">
       <option name="closed" value="true" />
@@ -280,7 +180,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/backend" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

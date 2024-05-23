@@ -10,8 +10,8 @@
       <a class="nav-link" href="search.html">Search</a>
     </div>
     <div class="right-items">
-      <a href="#" id="logoutButton">Logout</a>
       <a href="#" id="userIcon"><i class="fas fa-user"></i></a>
+      <a href="#" id="logoutButton" style="display: none;">Logout</a>
     </div>
   </div>
   <script>
@@ -20,6 +20,12 @@
       const logoutButton = document.getElementById('logoutButton');
       const token = localStorage.getItem('token');
       const userId = new URLSearchParams(window.location.search).get('userId');
+
+      if (token) {
+        logoutButton.style.display = 'block';
+      } else {
+        logoutButton.style.display = 'none';
+      }
 
       if (userIcon) {
         userIcon.addEventListener('click', function() {
