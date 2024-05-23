@@ -42,9 +42,11 @@ Presquites:
 - 
 Setting variables:
 - git clone project from this repository on your system(https://github.com/hnrkljnsn/project_group11.git)
-- open the project on IDE and set application.properties to your desirable username and password.
+- Open the project on IDE and set application.properties to your desirable username and password.
+- Make sure pom.xml file has all required dependencies and plugins.
 - Make sure MySql server is running locally on your machine.
-- Open (http://localhost:8080/home.html) in order to test web application and functionality.
+- Start running Spring Boot application.
+- Open (http://localhost:8080/home.html) to test web application and its functionality.
     
 
 ## Functionality
