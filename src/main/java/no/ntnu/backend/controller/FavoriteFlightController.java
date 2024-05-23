@@ -6,11 +6,11 @@ import no.ntnu.backend.model.User;
 import no.ntnu.backend.service.FavoriteFlightService;
 import no.ntnu.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -34,5 +34,12 @@ public class FavoriteFlightController {
         }
 
         return this.favoriteFlightService.getFavoriteFlights(user);
+    }
+
+    @PostMapping("/add")
+    public ResponseEntity<?> addFavoriteFlight(@RequestBody FavoriteFlight favoriteFlight, Authentication authentication) {
+        String username = authentication.getName();
+        favoriteFlightService.addFavoriteFlight(favoriteFlight, username);
+        return ResponseEntity.ok("Flight added to favorites");
     }
 }

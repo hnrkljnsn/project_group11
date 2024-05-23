@@ -8,8 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const returnDate = urlParams.get('returnDate');
     const price = urlParams.get('price');
 
-    const token = localStorage.getItem('token');
     let userRole = null;
+    const token = localStorage.getItem('token');
+    const userId = localStorage.getItem('userId');
 
     if (token) {
         try {
@@ -33,12 +34,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="flight-info" data-header="Destination">${returnCity}</div>
                 <div class="flight-info" data-header="Departure Date">${departureDate}</div>
                 <div class="flight-info" data-header="Return Date">${returnDate}</div>
-                <div class="flight-info" data-header="Price">${price}</div>`;
+                <div class="flight-info" data-header="Price">${price}</div>
+                <button id="addFavoriteButton" 
+                    style="width: 100px; padding: 10px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+                    Favorite
+                </button>`;
 
         if (userRole === 'ADMIN') {
             flightInfo += `
                 <button id="deleteFlightButton" 
-                    style="width: 100px; padding: 10px; background-color: darkred; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+                    style="width: 100px; padding: 10px; background-color: darkred; color: #fff; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">
                     Delete
                 </button>
                 <br>`;
@@ -56,6 +61,32 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
 
         flightDetails.innerHTML = flightInfo;
+
+        const addFavoriteButton = document.getElementById('addFavoriteButton');
+        if (addFavoriteButton) {
+            addFavoriteButton.addEventListener('click', function() {
+                if (token) {
+                    fetch('/api/favorite-flights/add', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${token}`
+                        },
+                        body: JSON.stringify({ flightId: flightId, userId: userId })
+                    })
+                        .then(response => {
+                            if (response.ok) {
+                                alert('Added to favorites');
+                            } else {
+                                alert('Failed to add to favorites');
+                            }
+                        })
+                        .catch(error => alert('Error: ' + error));
+                } else {
+                    alert('Please log in to add favorites');
+                }
+            });
+        }
 
         if (userRole === 'ADMIN') {
             const deleteButton = document.getElementById('deleteFlightButton');
