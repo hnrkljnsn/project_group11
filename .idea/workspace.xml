@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fca5b1d5-3a2f-449a-a9a6-e45c8e4b3dd8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/favoritesScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/favoritesScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/loginScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/loginScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/topnav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/topnav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/favorites.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/favorites.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1716411503866</updated>
       <workItem from="1716411506673" duration="942000" />
-      <workItem from="1716425415289" duration="1382000" />
+      <workItem from="1716425415289" duration="3952000" />
     </task>
     <task id="LOCAL−00001" summary="Created the necessary files to start coding frontende + separate directories for backend and frontend">
       <option name="closed" value="true" />
