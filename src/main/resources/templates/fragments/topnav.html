@@ -45,10 +45,9 @@
         });
       }
 
-      // Append userId to all internal navigation links if userId exists
       const navLinks = document.querySelectorAll('.nav-link');
       navLinks.forEach(link => {
-        const url = new URL(link.href, window.location.origin); // Ensure full URL
+        const url = new URL(link.href, window.location.origin);
         if (userId) {
           url.searchParams.set('userId', userId);
         }

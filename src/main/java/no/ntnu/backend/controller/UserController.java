@@ -21,11 +21,9 @@ import java.util.*;
 public class UserController {
 
     private final UserRepository userRepository;
-    private final FlightRepository flightRepository;
     private final JwtUtil jwtUtil;
     private final PasswordEncoder passwordEncoder;
-    private final UserService userService;
-    private final FavoriteFlightService favoriteFlightService; // Add this line
+    private final FavoriteFlightService favoriteFlightService;
 
     @PostMapping("/create-account")
     public ResponseEntity<String> createAccount(@RequestBody User user) {
@@ -33,7 +31,7 @@ public class UserController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Username already exists");
         }
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        user.setRole("USER"); // Assign the role USER to new accounts
+        user.setRole("USER");
         userRepository.save(user);
         return ResponseEntity.ok("Account created successfully");
     }
