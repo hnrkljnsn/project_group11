@@ -6,15 +6,7 @@
   <title>Flight Search Results</title>
   <link rel="stylesheet" type="text/css" href="/stylesheets/ProjectStylesheet.css">
   <style style="font-weight: lighter">
-    .search-link {
-      color: black; /* or any other color you prefer */
-      text-decoration: none;
-    }
 
-    .search-link:hover {
-      color: dimgrey;
-      text-decoration: none;
-    }
   </style>
 </head>
 <body>
@@ -22,8 +14,9 @@
   <div class="content-wrap">
     <div th:replace="~{fragments/topnav.html :: navbar}"></div>
 
+    <div style="display: flex; justify-content: center;">
     <div th:replace="~{fragments/searchForm.html :: searchForm}"></div>
-
+    </div>
     <div class="flight-result-list">
       <ul class="result-list">
       </ul>
