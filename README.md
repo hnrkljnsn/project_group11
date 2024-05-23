@@ -100,5 +100,5 @@ Clicking on the names will take you to their respective official websites for mo
 
 
 ## Contact
-Text
+Mantas Bagdonavicius - mantasb@stud.ntnu.no
 
