@@ -34,6 +34,18 @@ Clicking on the names will take you to their respective official websites for mo
 
 ## Development and Deployment
 
+Presquites:
+- Instal IDE(https://www.jetbrains.com/idea/)
+- Install JDK kit v17(https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+- Install Maven(https://maven.apache.org/download.cgi)
+- Install MySql server in order to run it locally(https://dev.mysql.com/downloads/installer/)
+- 
+Setting variables:
+- git clone project from this repository on your system(https://github.com/hnrkljnsn/project_group11.git)
+- open the project on IDE and set application.properties to your desirable username and password.
+- Make sure MySql server is running locally on your machine.
+- Open (http://localhost:8080/home.html) in order to test web application and functionality.
+    
 
 ## Functionality
 
