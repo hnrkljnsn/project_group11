@@ -5,7 +5,6 @@ import no.ntnu.backend.model.FavoriteFlight;
 import no.ntnu.backend.model.User;
 import no.ntnu.backend.service.FavoriteFlightService;
 import no.ntnu.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;

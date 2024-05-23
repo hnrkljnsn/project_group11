@@ -6,7 +6,6 @@ import no.ntnu.backend.model.User;
 import no.ntnu.backend.security.JwtUtil;
 import no.ntnu.backend.service.FavoriteFlightService;
 import no.ntnu.backend.service.UserService;
-import no.ntnu.repository.FavoriteFlightRepository;
 import no.ntnu.repository.FlightRepository;
 import no.ntnu.repository.UserRepository;
 import org.springframework.http.HttpStatus;
