@@ -23,7 +23,7 @@ This project was created using the following:
 
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Thymeleaf](https://www.thymeleaf.org/)
-- [PostgreSQL](https://www.postgresql.org/)
+- [MySQL](https://www.mysql.com/)
 - [NginX](https://www.nginx.com/)
 - [Docker](https://www.docker.com/)
 - [Postman](https://www.postman.com/)
@@ -31,7 +31,7 @@ This project was created using the following:
 Clicking on the names will take you to their respective official websites for more information.
 
 ## Development and Deployment
-Text
+
 
 ## Functionality
 
