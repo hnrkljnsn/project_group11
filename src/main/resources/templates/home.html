@@ -1,46 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="/js/homeSearchScript.js"></script>
+    <script src="/js/script.js"></script>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Home</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/ProjectStylesheet.css">
-
+    <link rel="icon" type="image/x-icon" href="/img/paper-plane-icon-logo.png">
 </head>
 <body>
-<div class ="navigationBar">
+<div class="page-container">
+    <div class="content-wrap">
+        <div th:replace="~{fragments/topnav.html :: navbar}"></div>
 
-    <div class ="left-items">
-        <a href="home.html">FlightFinder</a>
+        <div class="image-container">
+            <img src="https://raw.githubusercontent.com/hnrkljnsn/project_group11/main/img/pixlr-image-generator-f376714d-9e3b-465d-be85-f3177abebe3c%201.png" alt="Background image" />
+            <div class="search-wrapper">
+                <div th:replace="~{fragments/searchForm.html :: searchForm}"></div>
+            </div>
+        </div>
+
+        <div class="destination-grid-container">
+            <section class="destination-category">
+                <h3>Cheapest flights</h3>
+                <div class="destination-grid">
+                    <div class="grid-item" data-return-city="Oslo">
+                        <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/09/22/16/oslo.jpg?quality=75&width=1250&crop=3%3A2%2Csmart&auto=webp" alt="Flight 1" />
+                    </div>
+                    <div class="grid-item" data-return-city="Paris">
+                        <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/07/03/1c/9c.jpg" alt="Flight 2" />
+                    </div>
+                    <div class="grid-item" data-return-city="Istanbul">
+                        <img src="https://goguides.azureedge.net/media/vfahcvo0/3bae040b-2afb-4b11-9542-859eeb8ebaf1.jpg?anchor=center&mode=crop&width=1600&height=1066&quality=50" alt="Flight 3" />
+                    </div>
+                    <div class="grid-item" data-return-city="Istanbul">
+                        <img src="https://t4.ftcdn.net/jpg/04/38/64/95/360_F_438649569_DsSHTkasH6GqqQXwu7FbRG0OMHstAc2D.jpg" alt="Flight 3" />
+                    </div>
+                </div>
+            </section>
+            <section class="destination-category">
+                <h3>Trending destinations</h3>
+                <div class="destination-grid">
+                    <div class="grid-item" data-return-city="Paris">
+                        <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/07/03/1c/9c.jpg" alt="Flight 2" />
+                    </div>
+                    <div class="grid-item" data-return-city="Oslo">
+                        <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/09/22/16/oslo.jpg?quality=75&width=1250&crop=3%3A2%2Csmart&auto=webp" alt="Flight 1" />
+                    </div>
+                    <div class="grid-item" data-return-city="Istanbul">
+                        <img src="https://t4.ftcdn.net/jpg/04/38/64/95/360_F_438649569_DsSHTkasH6GqqQXwu7FbRG0OMHstAc2D.jpg" alt="Flight 3" />
+                    </div>
+                    <div class="grid-item" data-return-city="Istanbul">
+                        <img src="https://goguides.azureedge.net/media/vfahcvo0/3bae040b-2afb-4b11-9542-859eeb8ebaf1.jpg?anchor=center&mode=crop&width=1600&height=1066&quality=50" alt="Flight 3" />
+                    </div>
+                </div>
+            </section>
+
+            <section class="destination-category">
+                <h3>Browse destinations</h3>
+                <div class="destination-slider">
+                    <button class="slider-button prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <div class="slides">
+                        <div class="slide"><img src="https://t4.ftcdn.net/jpg/04/38/64/95/360_F_438649569_DsSHTkasH6GqqQXwu7FbRG0OMHstAc2D.jpg" alt="Image 1" /></div>
+                        <div class="slide"><img src="https://raw.githubusercontent.com/hnrkljnsn/project_group11/main/img/pixlr-image-generator-f376714d-9e3b-465d-be85-f3177abebe3c%201.png" alt="Image 2" /></div>
+                        <div class="slide"><img src="https://t4.ftcdn.net/jpg/04/38/64/95/360_F_438649569_DsSHTkasH6GqqQXwu7FbRG0OMHstAc2D.jpg" alt="Image 3" /></div>
+                        <div class="slide"><img src="https://raw.githubusercontent.com/hnrkljnsn/project_group11/main/img/pixlr-image-generator-f376714d-9e3b-465d-be85-f3177abebe3c%201.png" alt="Image 4" /></div>
+                        <div class="slide"><img src="https://t4.ftcdn.net/jpg/04/38/64/95/360_F_438649569_DsSHTkasH6GqqQXwu7FbRG0OMHstAc2D.jpg" alt="Image 5" /></div>
+                        <div class="slide"><img src="https://raw.githubusercontent.com/hnrkljnsn/project_group11/main/img/pixlr-image-generator-f376714d-9e3b-465d-be85-f3177abebe3c%201.png" alt="Image 6" /></div>
+                    </div>
+                    <button class="slider-button next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </section>
+        </div>
+
+        <canvas id="myCanvas"></canvas>
     </div>
-
-    <div class="middle-items">
-        <a class ="active" href='home.html'>Home</a>
-        <a href="about.html">About</a>
-        <a href="search.html">Search</a>
-    </div>
-
-    <div class ="right-items">
-        <a href="#user">User</a>
-    </div>
-
+    <div th:replace="~{fragments/footer.html :: footer}"></div>
 </div>
-
-<h2>hei</h2>
-<p>Testing</p>
-
-
-<div class="search-wrapper">
-    <label for="searchQuery">Search flights</label>
-    <form id="searchForm">
-        <input type="search" id="searchQuery" placeholder="Search for flights...">
-        <button type="submit">Search</button>
-    </form>
-</div>
-
-<script src="/js/homeSearchScript.js"></script>
 </body>
-
-<footer>
-
-</footer>
 </html>

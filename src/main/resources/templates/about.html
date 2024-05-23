@@ -1,29 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>About Us</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/ProjectStylesheet.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
+
 <body>
-<div class ="navigationBar">
+    <div class="page-container">
+        <div class="content-wrap">
+            <div th:replace="~{fragments/topnav.html :: navbar}">
+            </div>
 
-    <div class ="left-items">
-        <a href="home.html">FlightFinder</a>
-    </div>
 
-    <div class="middle-items">
-        <a class ="active" href='home.html'>Home</a>
-        <a href="about.html">About</a>
-        <a href="search.html">Search</a>
-    </div>
+            <div class="container-about">
+                <div class="main-about">
+                    <h2>Welcome to Our Company</h2>
+                    <p>Welcome to Flight Finder, where your journey into the skies begins with the perfect flight option
+                        tailored to your needs. At Flight Finder, we've taken to the skies, transforming the flight
+                        booking experience by aggregating real-time prices and schedules from a plethora of trusted
+                        airline partners. No more endless tab-switching to hunt down the best deal – our platform brings
+                        all the information to you in a single, streamlined experience.</p>
 
-    <div class ="right-items">
-        <a href="#user">User</a>
-    </div>
+                    <p>Our commitment goes beyond simply offering a vast array of flight options; we are dedicated to
+                        ensuring transparency, efficiency, and an exhilarating booking experience. Our user-friendly
+                        interface allows you to effortlessly compare flights, ensuring you find the perfect match for
+                        your travel preferences and budget. Farewell to the hidden fees and complex booking procedures –
+                        welcome to a smooth flight booking journey.</p>
 
-</div>
+                    <p>Flight Finder is not just about finding flights; it's about commencing your travel adventure on
+                        the right note. Our platform is crafted to infuse a sense of excitement into the planning
+                        process. From last-minute getaways to well-planned business trips, we ensure you have all the
+                        choices at your fingertips. Our services are designed to bring you closer to the world, one
+                        flight at a time.</p>
 
+                    <p>Join Flight Finder and elevate your travel planning to new heights. Whether you're chasing the
+                        Northern Lights, jetting off to a tropical paradise, or heading to a bustling city for a
+                        conference, every flight booked with us is a promise of discovery and reliability. With Flight
+                        Finder, set off on every journey with confidence and let your travel aspirations take flight.
+                    </p>
+
+
+                </div>
+
+                <div class="sidebar-about">
+                    <h2>Contact Us</h2>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>Phone: +1 234 567 890</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email: info@flightfinder.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Address: 123 Main St, Anytown, USA</span>
+                    </div>
+                </div>
+            </div>
+
+
+                <canvas id="myCanvas"></canvas>
+            </div>
+            <div th:replace="~{fragments/footer.html :: footer}">
+            </div>
+        </div>
 </body>
+
 </html>

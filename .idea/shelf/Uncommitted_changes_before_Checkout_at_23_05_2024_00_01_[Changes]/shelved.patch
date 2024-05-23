@@ -1,0 +1,231 @@
+Index: src/main/resources/Application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver\r\nspring.datasource.username=root\r\nspring.datasource.password=ntnu1234\r\n#replace localhost with the database host, 3306 with port number, library with the database name you use\r\nspring.datasource.url=jdbc:mysql://localhost:3306/test\r\n\r\n# Dev tools\r\nspring.devtools.restart.enabled=true\r\nspring.devtools.livereload.enabled=true\r\n\r\n# Hibernate Configuration\r\nspring.jpa.hibernate.ddl-auto=update\r\nspring.jpa.show-sql=true\r\nspring.jpa.open-in-view=false
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/src/main/resources/Application.properties b/src/main/resources/Application.properties
+--- a/src/main/resources/Application.properties	(revision 93b3d37eee924ac2d6c3f7fe7c4895c268de87b6)
++++ b/src/main/resources/Application.properties	(date 1716415190918)
+@@ -2,13 +2,14 @@
+ spring.datasource.username=root
+ spring.datasource.password=ntnu1234
+ #replace localhost with the database host, 3306 with port number, library with the database name you use
+-spring.datasource.url=jdbc:mysql://localhost:3306/test
++spring.datasource.url=jdbc:mysql://localhost:3306
+ 
+ # Dev tools
+ spring.devtools.restart.enabled=true
+ spring.devtools.livereload.enabled=true
+ 
+ # Hibernate Configuration
++spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+ spring.jpa.hibernate.ddl-auto=update
+ spring.jpa.show-sql=true
+ spring.jpa.open-in-view=false
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"01277d4c-b4e5-40c0-83ec-67c72fceb1ef\" name=\"Changes\" comment=\"Started creating logic for removing and adding flights from favorites.\">\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/no/ntnu/backend/DummyUserFavoritesInitializer.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/no/ntnu/backend/DummyUserFavoritesInitializer.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"CSS File\" />\r\n        <option value=\"HTML File\" />\r\n        <option value=\"Class\" />\r\n        <option value=\"Interface\" />\r\n        <option value=\"JavaScript File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"development\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 4\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2b7xwBLd2bcBMMzGRF3CziS7wTu\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,\r\n    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,\r\n    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,\r\n    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,\r\n    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;development&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;/Users/henrikloejensen/Documents/project_group11/src/main/java/no/ntnu/frontend&quot;,\r\n    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;spring.configuration.checksum&quot;: &quot;934567fe23c9b9d09b9a2b9a5fb0abd7&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\repos\\project_group11\\src\\main\\resources\\static\\stylesheets\" />\r\n      <recent name=\"C:\\repos\\project_group11\\src\\main\\resources\" />\r\n      <recent name=\"C:\\repos\\project_group11\\src\\main\\resources\\static\\js\" />\r\n      <recent name=\"C:\\repos\\project_group11\\src\\main\\resources\\static\" />\r\n      <recent name=\"$PROJECT_DIR$/src/main/resources/templates\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Spring Boot.Application\">\r\n    <configuration name=\"home2.html\" type=\"JavascriptDebugType\" temporary=\"true\" nameIsGenerated=\"true\" uri=\"http://localhost:63342/project_group11/src/main/resources/templates/home2.html\" useBuiltInWebServerPort=\"true\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Application\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"project_group11\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"no.ntnu.Application\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"no.ntnu.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Spring Boot.Application\" />\r\n        <item itemvalue=\"JavaScript Debug.home2.html\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"01277d4c-b4e5-40c0-83ec-67c72fceb1ef\" name=\"Changes\" comment=\"\" />\r\n      <created>1705580155022</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1705580155022</updated>\r\n      <workItem from=\"1705580156045\" duration=\"220000\" />\r\n      <workItem from=\"1709798748706\" duration=\"3632000\" />\r\n      <workItem from=\"1712822037505\" duration=\"5956000\" />\r\n      <workItem from=\"1713456526395\" duration=\"10230000\" />\r\n      <workItem from=\"1713523571882\" duration=\"3164000\" />\r\n      <workItem from=\"1713875447652\" duration=\"13143000\" />\r\n      <workItem from=\"1714035111048\" duration=\"380000\" />\r\n      <workItem from=\"1714039674784\" duration=\"1868000\" />\r\n      <workItem from=\"1714133954118\" duration=\"24193000\" />\r\n      <workItem from=\"1714236630980\" duration=\"8998000\" />\r\n      <workItem from=\"1714386028523\" duration=\"8039000\" />\r\n      <workItem from=\"1715783320733\" duration=\"617000\" />\r\n      <workItem from=\"1716319195457\" duration=\"4861000\" />\r\n    </task>\r\n    <task id=\"LOCAL−00001\" summary=\"Created the necessary files to start coding frontende + separate directories for backend and frontend\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1709799101541</created>\r\n      <option name=\"number\" value=\"LOCAL−00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00001\" />\r\n      <updated>1709799101541</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00002\" summary=\"Finally able to make the project into a spring project. Will use the web resource spring initializer next time...\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1710771243348</created>\r\n      <option name=\"number\" value=\"LOCAL−00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00002\" />\r\n      <updated>1710771243348</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00003\" summary=\"Got a springboot warning when navigating the menu of the website. Turns out the &lt;nav th:insert needs to be wrapped as such:  &quot;~{...}&quot;\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1710839768576</created>\r\n      <option name=\"number\" value=\"LOCAL−00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00003\" />\r\n      <updated>1710839768576</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00004\" summary=\"Started making script for creating an account.\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716204766638</created>\r\n      <option name=\"number\" value=\"LOCAL−00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00004\" />\r\n      <updated>1716204766638</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00005\" summary=\"Made UserController class and some changes in UserRepository\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716206297456</created>\r\n      <option name=\"number\" value=\"LOCAL−00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00005\" />\r\n      <updated>1716206297456</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00006\" summary=\"User can now be created from the createaccount.html and is added to the database.\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716208368311</created>\r\n      <option name=\"number\" value=\"LOCAL−00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00006\" />\r\n      <updated>1716208368311</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00007\" summary=\"After creating user you are now sent to the home page(home.html).\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716208531284</created>\r\n      <option name=\"number\" value=\"LOCAL−00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00007\" />\r\n      <updated>1716208531284</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00008\" summary=\"Started creating backend for the subscription for newsletter.\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716217412056</created>\r\n      <option name=\"number\" value=\"LOCAL−00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00008\" />\r\n      <updated>1716217412056</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00009\" summary=\"Now a database for emails is created and the inputted text is sent from the webapp to sql database. Trying to figure out how to not be able to send any text besides email-addresses.\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716218438263</created>\r\n      <option name=\"number\" value=\"LOCAL−00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00009\" />\r\n      <updated>1716218438263</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00010\" summary=\"Now only able to send email-addresses in the subscription field.\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716219297437</created>\r\n      <option name=\"number\" value=\"LOCAL−00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00010\" />\r\n      <updated>1716219297437</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00011\" summary=\"Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716219897692</created>\r\n      <option name=\"number\" value=\"LOCAL−00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00011\" />\r\n      <updated>1716219897692</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00012\" summary=\"A user can now have multiple favorite flights. They show up in  favorites.html when you log in.\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716308683218</created>\r\n      <option name=\"number\" value=\"LOCAL−00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00012\" />\r\n      <updated>1716308683218</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"13\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"RECENT_FILTERS\">\r\n      <map>\r\n        <entry key=\"User\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"pahmel0\" />\r\n                </option>\r\n              </RecentGroup>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"mkbrun\" />\r\n                </option>\r\n              </RecentGroup>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"*\" />\r\n                </option>\r\n              </RecentGroup>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"man\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"origin/backend\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Created the necessary files to start coding frontende + separate directories for backend and frontend\" />\r\n    <MESSAGE value=\"Finally able to make the project into a spring project. Will use the web resource spring initializer next time...\" />\r\n    <MESSAGE value=\"Got a springboot warning when navigating the menu of the website. Turns out the &lt;nav th:insert needs to be wrapped as such:  &quot;~{...}&quot;\" />\r\n    <MESSAGE value=\"Started making script for creating an account.\" />\r\n    <MESSAGE value=\"Made UserController class and some changes in UserRepository\" />\r\n    <MESSAGE value=\"User can now be created from the createaccount.html and is added to the database.\" />\r\n    <MESSAGE value=\"After creating user you are now sent to the home page(home.html).\" />\r\n    <MESSAGE value=\"Started creating backend for the subscription for newsletter.\" />\r\n    <MESSAGE value=\"Now a database for emails is created and the inputted text is sent from the webapp to sql database. Trying to figure out how to not be able to send any text besides email-addresses.\" />\r\n    <MESSAGE value=\"Now only able to send email-addresses in the subscription field.\" />\r\n    <MESSAGE value=\"Made some final aesthetic changes in the newsletter part of the footer.(The placeholder fits the input field now)\" />\r\n    <MESSAGE value=\"A user can now have multiple favorite flights. They show up in  favorites.html when you log in.\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"A user can now have multiple favorite flights. They show up in  favorites.html when you log in.\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.ClassNotFoundException\" package=\"java.lang\" />\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 93b3d37eee924ac2d6c3f7fe7c4895c268de87b6)
++++ b/.idea/workspace.xml	(date 1716415190973)
+@@ -5,7 +5,9 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="01277d4c-b4e5-40c0-83ec-67c72fceb1ef" name="Changes" comment="Started creating logic for removing and adding flights from favorites.">
+-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/DummyUserFavoritesInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/DummyUserFavoritesInitializer.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/backend/DatabaseConnectionTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/Application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Application.properties" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -45,32 +47,37 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;development&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;/Users/henrikloejensen/Documents/project_group11/src/main/java/no/ntnu/frontend&quot;,
+-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+-    &quot;spring.configuration.checksum&quot;: &quot;934567fe23c9b9d09b9a2b9a5fb0abd7&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Application.DatabaseConnectionTest.executor": "Run",
++    "DefaultHtmlFileTemplate": "HTML File",
++    "JavaScript Debug.home.html.executor": "Run",
++    "RequestMappingsPanelOrder0": "0",
++    "RequestMappingsPanelOrder1": "1",
++    "RequestMappingsPanelWidth0": "75",
++    "RequestMappingsPanelWidth1": "75",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "Spring Boot.Application.executor": "Run",
++    "WebServerToolWindowFactoryState": "false",
++    "dart.analysis.tool.window.visible": "false",
++    "git-widget-placeholder": "93b3d37e",
++    "kotlin-language-version-configured": "true",
++    "last_opened_file_path": "/Users/henrikloejensen/Documents/project_group11/src/main/java/no/ntnu/frontend",
++    "list.type.of.created.stylesheet": "CSS",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "project.structure.last.edited": "SDKs",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.2",
++    "spring.configuration.checksum": "934567fe23c9b9d09b9a2b9a5fb0abd7",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="C:\repos\project_group11\src\main\resources\static\stylesheets" />
+@@ -81,7 +88,23 @@
+     </key>
+   </component>
+   <component name="RunManager" selected="Spring Boot.Application">
++    <configuration name="DatabaseConnectionTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="no.ntnu.backend.DatabaseConnectionTest" />
++      <module name="project_group11" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="no.ntnu.backend.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
+     <configuration name="home2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/project_group11/src/main/resources/templates/home2.html" useBuiltInWebServerPort="true">
++      <method v="2" />
++    </configuration>
++    <configuration name="home.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/project_group11/src/main/resources/templates/home.html" useBuiltInWebServerPort="true">
+       <method v="2" />
+     </configuration>
+     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+@@ -100,9 +123,19 @@
+     <recent_temporary>
+       <list>
+         <item itemvalue="Spring Boot.Application" />
++        <item itemvalue="Application.DatabaseConnectionTest" />
++        <item itemvalue="JavaScript Debug.home.html" />
+         <item itemvalue="JavaScript Debug.home2.html" />
+       </list>
+     </recent_temporary>
++  </component>
++  <component name="SharedIndexes">
++    <attachedChunks>
++      <set>
++        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
++        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
++      </set>
++    </attachedChunks>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+@@ -125,6 +158,7 @@
+       <workItem from="1714386028523" duration="8039000" />
+       <workItem from="1715783320733" duration="617000" />
+       <workItem from="1716319195457" duration="4861000" />
++      <workItem from="1716413419657" duration="1770000" />
+     </task>
+     <task id="LOCAL−00001" summary="Created the necessary files to start coding frontende + separate directories for backend and frontend">
+       <option name="closed" value="true" />
+@@ -219,6 +253,17 @@
+   <component name="Vcs.Log.Tabs.Properties">
+     <option name="RECENT_FILTERS">
+       <map>
++        <entry key="Branch">
++          <value>
++            <list>
++              <RecentGroup>
++                <option name="FILTER_VALUES">
++                  <option value="HEAD" />
++                </option>
++              </RecentGroup>
++            </list>
++          </value>
++        </entry>
+         <entry key="User">
+           <value>
+             <list>
+@@ -251,19 +296,7 @@
+       <map>
+         <entry key="MAIN">
+           <value>
+-            <State>
+-              <option name="FILTERS">
+-                <map>
+-                  <entry key="branch">
+-                    <value>
+-                      <list>
+-                        <option value="origin/backend" />
+-                      </list>
+-                    </value>
+-                  </entry>
+-                </map>
+-              </option>
+-            </State>
++            <State />
+           </value>
+         </entry>
+       </map>
+Index: src/main/java/no/ntnu/backend/DatabaseConnectionTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/no/ntnu/backend/DatabaseConnectionTest.java b/src/main/java/no/ntnu/backend/DatabaseConnectionTest.java
+new file mode 100644
+--- /dev/null	(date 1716413656787)
++++ b/src/main/java/no/ntnu/backend/DatabaseConnectionTest.java	(date 1716413656787)
+@@ -0,0 +1,19 @@
++package no.ntnu.backend;
++
++import java.sql.Connection;
++import java.sql.DriverManager;
++import java.sql.SQLException;
++
++public class DatabaseConnectionTest {
++    public static void main(String[] args) {
++        String jdbcUrl = "jdbc:mysql://localhost:3306/test";
++        String username = "root";
++        String password = "ntnu1234";
++
++        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
++            System.out.println("Database connection successful!");
++        } catch (SQLException e) {
++            e.printStackTrace();
++        }
++    }
++}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Favorite Flights</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/ProjectStylesheet.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/flights.css">
+  <script src="/js/favoritesScript.js"></script>
+  <script src="/js/loginScript.js"></script>
+</head>
+<body>
+<div class="page-container">
+  <div class="content-wrap">
+    <div th:replace="~{fragments/topnav.html :: navbar}"></div>
+    <div class="page-container">
+      <div class="content-wrap">
+        <div class="favorites-title">Your Favorite Flights:</div>
+        <ul id="favoritesList" class="flight-details-container"></ul>
+      </div>
+    </div>
+    <canvas id="myCanvas"></canvas>
+  </div>
+  <div th:replace="~{fragments/footer.html :: footer}"></div>
+</div>
+</body>
+</html>

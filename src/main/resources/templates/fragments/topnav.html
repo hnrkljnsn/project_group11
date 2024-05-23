@@ -1,0 +1,58 @@
+<div th:fragment="navbar">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <div class="navigationBar">
+    <div class="left-items">
+      <a href="home.html" class="nav-link" >Flight<br>Finder</a>
+    </div>
+    <div class="middle-items">
+      <a class="active nav-link" href="home.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="search.html">Search</a>
+    </div>
+    <div class="right-items">
+      <a href="#" class="nav-link" id="userIcon"><i class="fas fa-user"></i></a>
+      <a href="#" class="nav-link" id="logoutButton" style="display: none;">Logout</a>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const userIcon = document.getElementById('userIcon');
+      const logoutButton = document.getElementById('logoutButton');
+      const token = localStorage.getItem('token');
+      const userId = localStorage.getItem('userId');
+
+      if (token) {
+        logoutButton.style.display = 'block';
+      } else {
+        logoutButton.style.display = 'none';
+      }
+
+      if (userIcon) {
+        userIcon.addEventListener('click', function() {
+          if (token && userId) {
+            window.location.href = `favorites.html`;
+          } else {
+            window.location.href = 'login.html';
+          }
+        });
+      }
+
+      if (logoutButton) {
+        logoutButton.addEventListener('click', function() {
+          localStorage.removeItem('token');
+          localStorage.removeItem('userId');
+          window.location.href = 'login.html';
+        });
+      }
+
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        const url = new URL(link.href, window.location.origin);
+        if (userId) {
+          url.searchParams.set('userId', userId);
+        }
+        link.href = url.toString();
+      });
+    });
+  </script>
+</div>

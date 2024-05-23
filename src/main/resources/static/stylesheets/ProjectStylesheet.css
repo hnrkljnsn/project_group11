@@ -1,114 +1,564 @@
- /* Use the Inter font family for body and all text elements */
+/* Use the Inter font family for body and all text elements */
+body,
+h1,
+h2,
+h3,
+p {
+    font-family: 'Inter', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
 
- body,
- h1,
- h2,
- h3,
- p {
-     font-family: 'Inter', sans-serif;
- }
+/* Custom font weights for headings and paragraph text */
+h1,
+h2,
+h3 {
+    font-weight: 500;
+    /* Inter medium italic */
+    font-style: italic;
+}
 
- /* Custom font weights for headings and paragraph text */
- h1,
- h2,
- h3 {
-     font-weight: 500;
-     /* Inter medium italic */
-     font-style: italic;
- }
+p {
+    font-weight: 300;
+    /* Inter light */
+}
 
- p {
-     font-weight: 300;
-     /* Inter light */
- }
-
- /* Background colors for header, footer, and containers */
- nav,
- footer {
-     background-color: #4AA8C6 ;
-     color: #FFFFFF;
- }
-
- .navigationBar{
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     height: 60px;
-     background-color: #4AA8C6;
-     padding: 0 20px;
- }
-
- .navigationBar.active{
-     font-weight: bold;
-     color: red;
- }
-
- .navigationBar a{
-     color: #FFFFFF;
-     text-decoration: none;
-     margin-right: 20px;
- }
-
- .middle-items{
-     flex-grow: 1;
-     justify-content: center;
- }
- .left-items,.right-items,.middle-items{
+.page-container {
     display: flex;
-     align-items: center;
- }
+    flex-direction: column;
 
- .left-items{
-     margin-right: auto;
- }
+    min-height: 100vh;
+}
 
- .container {
-     background-color: #FFFFFF;
-     color: #000000;
- }
+.content-wrap {
+    flex: 1;
 
- /* Ensure full viewport height sections */
- .full-height {
-     min-height: 100vh;
- }
+}
+
+.navigationBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: #4AA8C6;
+    padding: 0 20px;
+}
+
+.navigationBar.active{
+    font-weight: bold;
+    color: red;
+}
+
+.navigationBar a{
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-right: 50px;
+}
+
+.middle-items{
+    flex-grow: 1;
+    justify-content: center;
+}
+.middle-items a:hover {
+    text-decoration: underline;
+}
+.right-items,.middle-items{
+    display: flex;
+    align-items: center;
+}
+
+.left-items{
+    margin-right: auto;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: oblique;
+}
+
+.container {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+/* Ensure full viewport height sections */
+.full-height {
+    min-height: 100vh;
+}
 
 
- /* Styling for the flight results */
+/* Styling for the flight results */
 
- .result-list {
-     list-style-type: none;
-     padding: 0;
-     margin: 0;
- }
- .flight-card {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     margin-top: 10px;
-     border: 1px solid #ccc;
-     padding: 10px;
-     background-color: #fff;
- }
+.result-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.flight-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fff;
+}
 
- .flight-image img {
-     width: 200px;
-     height: auto;
-     margin-right: 20px;
- }
+.flight-image img {
+    width: 100px;
+    height: 60px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
 
- .flight-info {
-     display: inline-flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     margin-right: 20px;
-     min-width: 100px;
-     white-space: nowrap;
- }
+.flight-info {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+    min-width: 100px;
+    white-space: nowrap;
+}
 
- .flight-info:before {
-     content: attr(data-header);
-     font-weight: bold;
-     white-space: nowrap;
-     margin-bottom: 4px;
- }
+.flight-info:before {
+    content: attr(data-header);
+    font-weight: bold;
+    white-space: nowrap;
+    margin-bottom: 4px;
+}
+
+
+/*Styling for the home page image/search-form*/
+
+.image-container {
+    position: relative;
+    width: 100%; /* Full width */
+    height: 600px; /* Fixed height */
+    overflow: hidden;
+}
+
+.image-container:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; /* This will ensure the image covers the area without stretching */
+}
+
+
+/* Styles for the form elements on home page */
+.search-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.85); /* Increased transparency */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Added shadow */
+    box-sizing: border-box;
+}
+
+/* Styles for the form elements on search page */
+.search-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background: rgba(255, 255, 255, 0); /* Increased transparency */
+    padding: 30px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 20px; /* Add some top margin for spacing */
+}
+
+.search-wrapper form, .search-page-wrapper form {
+    width: 100%;
+}
+
+.search-wrapper .form-row, .search-page-wrapper .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.search-wrapper .form-row div, .search-page-wrapper .form-row div {
+    width: 48%;
+}
+
+.search-wrapper label, .search-page-wrapper label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.search-wrapper input[type="text"], .search-page-wrapper input[type="text"],
+.search-wrapper input[type="date"], .search-page-wrapper input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow to input fields */
+}
+
+.search-wrapper button, .search-page-wrapper button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added shadow to button */
+}
+
+.search-wrapper button:hover, .search-page-wrapper button:hover {
+    background-color: #0056b3;
+}
+
+/* Additional margin for result list */
+.flight-result-list {
+    margin-top: 20px;
+}
+
+/* Styles for the form elements on search page without absolute positioning */
+.search-page-wrapper {
+    position: static;
+}
+
+/* Styles for input and button */
+#searchQuery, button {
+    height: 40px;
+    border: 1px solid #ccc;
+    margin: 0;
+}
+
+#searchQuery {
+    flex-grow: 1;
+    border-radius: 8px 0 0 8px;
+    padding: 0 10px;
+}
+
+
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px; /* Adjust this value to change the roundness of the button */
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Hide visually but keep for screen readers */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+
+/* Styling for the grid-section with destinations on homepage*/
+
+.destination-grid-container {
+    margin-top: 5rem;
+}
+
+.destination-category {
+    margin-top: 4rem;
+}
+.destination-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.destination-category h3 {
+}
+
+.grid-item {
+    flex: 1 0 auto; /* Items will grow to fill the space, won't shrink smaller than their content */
+    min-width: 200px; /* Items will not shrink smaller than 250px */
+    max-width: 250px;
+    height: 150px; /* fixed height */
+    box-sizing: border-box; /* Include padding and borders in the width */
+}
+
+.grid-item img {
+    width: 100%; /* Make the image fill the entire width of the grid-item */
+    height: 100%; /* Optional: Set the height to fill the grid-item if aspect ratio is not a concern */
+    object-fit: cover; /* This will ensure the image covers the area without stretching */
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling for slider navigation buttons */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.slider-button.prev {
+    left: 0;
+}
+
+.slider-button.next {
+    right: 0;
+}
+
+/* Adjustments to existing slider styles */
+.destination-slider {
+    position: relative; /* Ensure buttons are positioned relative to the slider */
+    overflow: hidden;
+    width: 100%;
+    max-width: 750px; /* Limit the max width of the slider to fit three items */
+    margin: 0 auto; /* Center the slider */
+    background: transparent; /* Remove gray background */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: calc(100% * 6); /* Adjust based on number of slides */
+}
+
+.slide {
+    flex: 0 0 33.3333%; /* Each slide takes up one-third of the slider width */
+    max-width: 33.3333%; /* Each slide takes up one-third of the slider width */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.slide img {
+    width: 100%;
+    height: 150px; /* Ensure height matches grid-item */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+    border-radius: 10px;
+}
+
+/* Styling for slider navigation buttons */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.slider-button.prev {
+    left: 0;
+}
+
+.slider-button.next {
+    right: 0;
+}
+
+
+/* Footer styling */
+.footer {
+    background-color: #4AA8C6;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.newsletter {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 100%;
+}
+
+.newsletter button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.language-select {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.language-select img {
+    width: 24px;
+    height: auto;
+}
+
+.copyright {
+    font-size: 12px;
+}
+
+/* About page styling */
+.container-about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.main-about {
+    flex: 2;
+    margin-right: 2rem;
+}
+
+.sidebar-about {
+    flex: 1;
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact-item i {
+    margin-right: 1rem;
+    color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+
+    .newsletter button {
+        width: 100%;
+    }
+
+    .language-select {
+        justify-content: center;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .destination-slider {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .destination-slider .slide {
+        min-width: 100%; /* Slides will fill the width of the screen */
+        max-width: 100%;
+        height: auto; /* Adjust the height to maintain the aspect ratio of the images */
+    }
+
+    .page-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+

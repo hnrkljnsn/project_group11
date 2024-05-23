@@ -1,11 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
-    const query = urlParams.get('query');
-    // Assume that an empty query should fetch all flights
-    fetch(`/api/search?query=${encodeURIComponent(query || '')}`)  // Handle empty query as an empty string
+    const departureCity = urlParams.get('departureCity');
+    const returnCity = urlParams.get('returnCity');
+    const departureDate = urlParams.get('departureDate');
+    const returnDate = urlParams.get('returnDate');
+
+    let query = '';
+
+    if (departureCity && returnCity && departureDate && returnDate) {
+        query = `departureCity=${encodeURIComponent(departureCity)}&returnCity=${encodeURIComponent(returnCity)}&departureDate=${encodeURIComponent(departureDate)}&returnDate=${encodeURIComponent(returnDate)}`;
+    } else if (returnCity) {
+        query = `returnCity=${encodeURIComponent(returnCity)}`;
+    }
+
+    fetch(`/api/search?${query}`)
         .then(response => response.json())
         .then(displayFlights)
         .catch(handleError);
+
+    const gridItems = document.querySelectorAll('.grid-item');
+    gridItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const returnCity = this.getAttribute('data-return-city');
+            console.log('Return City:', returnCity); // Log the return city
+            window.location.href = `/search.html?returnCity=${encodeURIComponent(returnCity)}`;
+        });
+    });
 });
 
 function displayFlights(flights) {
@@ -30,17 +50,20 @@ function handleError(error) {
 
 function createFlightInfoString(flight) {
     let imageSrc = 'https://t4.ftcdn.net/jpg/04/38/64/95/360_F_438649569_DsSHTkasH6GqqQXwu7FbRG0OMHstAc2D.jpg';
-
     return `
-      <li class="flight-card">
-        <div class="flight-image">
-          <img src="${imageSrc}" alt="Flight Image" />
+      <a href="flightdetails.html?flightId=${flight.flightId}&airline=${encodeURIComponent(flight.airline)}&departureCity=${encodeURIComponent(flight.departureCity)}&returnCity=${encodeURIComponent(flight.returnCity)}&departureDate=${flight.departureDate}&returnDate=${flight.returnDate}&price=${flight.price}" class="search-link">
+        <div class="flight-card">
+          <div class="flight-image">
+            <img src="${imageSrc}" alt="Flight Image" />
+          </div>
+          <div class="flight-info" data-header="Departure City">${flight.departureCity}</div>
+          <div class="flight-info" data-header="Return City">${flight.returnCity}</div>
+          <div class="flight-info" data-header="Departure Date">${flight.departureDate}</div>
+          <div class="flight-info" data-header="Return Date">${flight.returnDate}</div>
+          <div class="flight-info" data-header="Round-trip">${flight.roundTrip}</div>
+          <div class="flight-info" data-header="Price">${flight.price}</div>
+          <div class="flight-info title" data-header="Airline">${flight.airline}</div>
         </div>
-        <div class="flight-info" data-header="Id">${flight.flightId}</div>
-        <div class="flight-info" data-header="Name">${flight.flightName}</div>
-        <div class="flight-info" data-header="Round-trip">${flight.roundTrip}</div>
-        <div class="flight-info" data-header="Departure">${flight.departureDate}</div>
-        <div class="flight-info" data-header="Return">${flight.returnDate}</div>
-      </li>
+      </a>
     `;
 }

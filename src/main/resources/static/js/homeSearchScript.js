@@ -3,8 +3,23 @@ document.addEventListener('DOMContentLoaded', function() {
     if (searchForm) {
         searchForm.addEventListener('submit', function(event) {
             event.preventDefault();
-            const query = document.getElementById('searchQuery').value;
-            window.location.href = `/search.html?query=${encodeURIComponent(query)}`;
+            const departureCity = document.getElementById('departureCity').value;
+            const returnCity = document.getElementById('returnCity').value;
+            const departureDate = document.getElementById('departureDate').value;
+            const returnDate = document.getElementById('returnDate').value;
+            const queryString = `departureCity=${encodeURIComponent(departureCity)}&returnCity=${encodeURIComponent(returnCity)}&departureDate=${encodeURIComponent(departureDate)}&returnDate=${encodeURIComponent(returnDate)}`;
+            window.location.href = `/search.html?${queryString}`;
         });
     }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const gridItems = document.querySelectorAll('.grid-item');
+
+    gridItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const returnCity = this.getAttribute('data-return-city');
+            window.location.href = `/search.html?returnCity=${encodeURIComponent(returnCity)}`;
+        });
+    });
 });
