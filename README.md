@@ -16,6 +16,8 @@ Group project for IDATA2301 Web Technologies and IDATA2306 Application developme
 
 
 ## Description
+![Screenshot 2024-05-23 080916](https://github.com/hnrkljnsn/project_group11/assets/77272818/a281bc66-b860-4bfd-bfc0-b413a8a1be0d)
+
 Our project consists of developing a web store for a fictional flight finder company called FlightFinder.
 
 ## Frameworks and Tools
