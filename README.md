@@ -29,6 +29,7 @@ This project was created using the following:
 - [NginX](https://www.nginx.com/)
 - [Docker](https://www.docker.com/)
 - [Postman](https://www.postman.com/)
+- [AWS](https://aws.amazon.com/)
 
 Clicking on the names will take you to their respective official websites for more information.
 
@@ -115,4 +116,6 @@ Setting variables:
 
 ## Contact
 Mantas Bagdonavicius - mantasb@stud.ntnu.no
+Mats Brun - matsbru@stud.ntnu.no
+Henrik Loe Jensen - henrilj@stud.ntnu.no
 
