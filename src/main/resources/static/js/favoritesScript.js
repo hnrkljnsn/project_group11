@@ -1,19 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     const token = localStorage.getItem('token');
-    if (!token) {
-        console.error('Token not found, redirecting to login.');
-        window.location.href = 'login.html';
-        return;
-    }
-    console.log('Token found:', token);
+    const userId = localStorage.getItem('userId');
 
-    const userId = new URLSearchParams(window.location.search).get('userId');
-    if (!userId) {
-        console.error('User ID not found in URL, redirecting to login.');
+    if (!token || !userId) {
+        console.error('Token or User ID not found, redirecting to login.');
         window.location.href = 'login.html';
         return;
     }
-    console.log('User ID found:', userId);
+    console.log('Token and User ID found:', token, userId);
 
     fetch(`/api/${userId}/favorite-flights`, {
         method: 'GET',
@@ -41,8 +35,24 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Favorites list element found:', favoritesList);
 
             flights.forEach(favoriteFlight => {
+                const flight = favoriteFlight.flight;
                 const listItem = document.createElement('li');
-                listItem.textContent = `Flight from ${favoriteFlight.flight.departureCity} to ${favoriteFlight.flight.returnCity} with ${favoriteFlight.flight.airline}`;
+                listItem.classList.add('flight-card');
+
+                let imageSrc = 'https://t4.ftcdn.net/jpg/04/38/64/95/360_F_438649569_DsSHTkasH6GqqQXwu7FbRG0OMHstAc2D.jpg';
+                let flightInfo = `
+                    <div class="flight-image"><img src="${imageSrc}" alt="Flight Image" /></div>
+                    <div class="flight-info" data-header="Airline">${flight.airline}</div>
+                    <div class="flight-info" data-header="Departure">${flight.departureCity}</div>
+                    <div class="flight-info" data-header="Destination">${flight.returnCity}</div>
+                    <div class="flight-info" data-header="Departure Date">${flight.departureDate}</div>
+                    <div class="flight-info" data-header="Return Date">${flight.returnDate}</div>
+                    <div class="flight-info" data-header="Price">${flight.price}</div>
+                    <div class="flight-card">
+                    </div>
+                `;
+
+                listItem.innerHTML = flightInfo;
                 favoritesList.appendChild(listItem);
             });
         })
