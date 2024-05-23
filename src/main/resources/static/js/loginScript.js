@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 .then(data => {
                     if (data.status === 'Login successful') {
                         localStorage.setItem('token', data.token);
-                        window.location.href = `favorites.html?userId=${data.userId}`;
+                        localStorage.setItem('userId', data.userId);
+                        window.location.href = `favorites.html`;
                     } else {
                         alert('Login failed: ' + data.status);
                     }

@@ -1,19 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     const token = localStorage.getItem('token');
-    if (!token) {
-        console.error('Token not found, redirecting to login.');
-        window.location.href = 'login.html';
-        return;
-    }
-    console.log('Token found:', token);
+    const userId = localStorage.getItem('userId');
 
-    const userId = new URLSearchParams(window.location.search).get('userId');
-    if (!userId) {
-        console.error('User ID not found in URL, redirecting to login.');
+    if (!token || !userId) {
+        console.error('Token or User ID not found, redirecting to login.');
         window.location.href = 'login.html';
         return;
     }
-    console.log('User ID found:', userId);
+    console.log('Token and User ID found:', token, userId);
 
     fetch(`/api/${userId}/favorite-flights`, {
         method: 'GET',
