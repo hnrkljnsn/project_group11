@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>About Us</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/ProjectStylesheet.css">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
@@ -14,13 +13,10 @@
         <div class="content-wrap">
             <div th:replace="~{fragments/topnav.html :: navbar}">
             </div>
-            <div class="header">
-                <h1>About Us</h1>
-            </div>
 
 
-            <div class="container">
-                <div class="main">
+            <div class="container-about">
+                <div class="main-about">
                     <h2>Welcome to Our Company</h2>
                     <p>Welcome to Flight Finder, where your journey into the skies begins with the perfect flight option
                         tailored to your needs. At Flight Finder, we've taken to the skies, transforming the flight
@@ -49,7 +45,7 @@
 
                 </div>
 
-                <div class="sidebar">
+                <div class="sidebar-about">
                     <h2>Contact Us</h2>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
@@ -66,19 +62,12 @@
                 </div>
             </div>
 
-            <div class="footer">
-                <p>This website is a result of a university group project, performed in the course IDATA2301
-                    Web technologies, at NTNU. All the information provided here is a result of imagination.
-                    Any resemblance with real companies or products is a coincidence. </p>
-                <div style="display: flex; justify-content: center;">
-                    <p>Copyright © 2024 FlightFinder</p>
-                </div>
+
                 <canvas id="myCanvas"></canvas>
             </div>
             <div th:replace="~{fragments/footer.html :: footer}">
             </div>
         </div>
-    </div>
 </body>
 
 </html>
