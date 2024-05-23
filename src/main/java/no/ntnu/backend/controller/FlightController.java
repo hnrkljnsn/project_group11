@@ -6,6 +6,7 @@ import no.ntnu.repository.FlightRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
@@ -39,6 +40,7 @@ public class FlightController {
         return ResponseEntity.ok(flights);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/flights/{flightId}")
     @Transactional
     public ResponseEntity<Void> deleteFlight(@PathVariable Integer flightId) {
