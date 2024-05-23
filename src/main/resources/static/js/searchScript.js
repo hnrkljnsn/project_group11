@@ -9,12 +9,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (departureCity && returnCity && departureDate && returnDate) {
         query = `departureCity=${encodeURIComponent(departureCity)}&returnCity=${encodeURIComponent(returnCity)}&departureDate=${encodeURIComponent(departureDate)}&returnDate=${encodeURIComponent(returnDate)}`;
+    } else if (returnCity) {
+        query = `returnCity=${encodeURIComponent(returnCity)}`;
     }
 
     fetch(`/api/search?${query}`)
         .then(response => response.json())
         .then(displayFlights)
         .catch(handleError);
+
+    const gridItems = document.querySelectorAll('.grid-item');
+    gridItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const returnCity = this.getAttribute('data-return-city');
+            console.log('Return City:', returnCity); // Log the return city
+            window.location.href = `/search.html?returnCity=${encodeURIComponent(returnCity)}`;
+        });
+    });
 });
 
 function displayFlights(flights) {

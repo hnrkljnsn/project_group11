@@ -30,12 +30,14 @@ public class FlightController {
             @RequestParam(required = false) LocalDate departureDate,
             @RequestParam(required = false) LocalDate returnDate) {
 
-        if (departureCity == null && returnCity == null && departureDate == null && returnDate == null) {
-            return ResponseEntity.ok((List<Flight>) flightRepository.findAll());
-        }
+        List<Flight> flights;
 
-        List<Flight> flights = flightRepository.findByDepartureCityAndReturnCityAndDepartureDateAndReturnDate(
-                departureCity, returnCity, departureDate, returnDate);
+        if (departureCity != null || returnCity != null || departureDate != null || returnDate != null) {
+            flights = flightRepository.findByDepartureCityAndReturnCityAndDepartureDateAndReturnDate(
+                    departureCity, returnCity, departureDate, returnDate);
+        } else {
+            flights = (List<Flight>) flightRepository.findAll();
+        }
 
         return ResponseEntity.ok(flights);
     }

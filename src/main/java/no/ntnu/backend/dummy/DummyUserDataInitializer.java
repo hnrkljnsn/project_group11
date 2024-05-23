@@ -27,9 +27,9 @@ public class DummyUserDataInitializer implements ApplicationListener<Application
     public void onApplicationEvent(ApplicationReadyEvent event) {
         logger.info("Importing user test data...");
         if (userRepository.count() == 0) {
-            createUser("1", "1", "USER");
+            createUser("dave", "Dangerous2024", "USER");
             createUser("2", "2", "USER");
-            createUser("3", "3", "ADMIN");
+            createUser("chuck", "Nunchucks2024", "ADMIN");
 
             logger.info("DONE importing user test data");
         } else {

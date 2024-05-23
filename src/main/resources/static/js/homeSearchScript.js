@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     gridItems.forEach(item => {
         item.addEventListener('click', function() {
-            const flightId = this.getAttribute('data-flight-id');
-            window.location.href = `/search.html?query=${encodeURIComponent(flightId)}`;
+            const returnCity = this.getAttribute('data-return-city');
+            window.location.href = `/search.html?returnCity=${encodeURIComponent(returnCity)}`;
         });
     });
 });
